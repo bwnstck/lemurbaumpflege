@@ -1,15 +1,24 @@
-import React from "react";
-import { Wrapper } from "./components/Wrapper";
+import React, { FunctionComponent } from "react";
+import GlobalStyle from "./GlobalStyles";
 
-function App() {
+import Wrapper from "./components/Wrapper";
+import Navbar from "./components/Navbar";
+import Welcome from "./screens/Welcome";
+import Footer from "./components/Footer";
+import Skillz from "./screens/Skillz";
+
+const App: FunctionComponent = () => {
   return (
-    <div>
+    <>
+      <GlobalStyle />
+      <Navbar />
+      <Welcome />
       <Wrapper>
-        hi
-        <p>Was geht </p>
+        <Skillz />
       </Wrapper>
-    </div>
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
