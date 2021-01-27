@@ -19,9 +19,16 @@ const Navbar: FunctionComponent = () => {
   );
 };
 const NavContainer = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--primary);
   display: flex;
   align-items: center;
   padding: 1rem;
+  height: var(--nav-height);
+
   img {
     height: 50px;
     margin-right: 1rem;

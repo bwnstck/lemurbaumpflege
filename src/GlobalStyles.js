@@ -5,6 +5,8 @@ const GlobalStyle = createGlobalStyle`
     --primary: #a7bc8f;
     --text-primary: white;
     --text-dark: black;
+    --nav-height: 75px;
+    --transition: all .5s ease-in
   }
   *,
   *::after,
@@ -30,6 +32,9 @@ const GlobalStyle = createGlobalStyle`
   h6 {
     font-weight: 700;
     letter-spacing: .2rem;
+  }
+  p{
+    line-height: 2;
   }
   ul{
     list-style-type: none;
