@@ -13,7 +13,9 @@ const Skillz: FunctionComponent = () => {
       <h2>Leistungen</h2>
       <Card>
         <h3>
-          <TreeImg src={Tree} alt="Baum" />
+          <BeforeTree>
+            <TreeImg src={Tree} alt="Baum" />
+          </BeforeTree>
           Baumpflege
         </h3>
         <ul>
@@ -98,16 +100,29 @@ const CardWrapper = styled.div`
     transition: var(--transition);
   }
 `;
-const TreeImg = styled.img`
-  &::after {
-    content: "adfadfaf";
-    position: absolute;
-    top: 20px;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    color: red;
+const BeforeTree = styled.div`
+  transition: var(--transition);
+  position: relative;
+  :hover {
+    &::before {
+      content: url(${Tree});
+      height: 35px;
+      width: 35px;
+      position: absolute;
+    }
+    &::after {
+      content: url(${Tree});
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      right: 0;
+      z-index: 4;
+    }
   }
+`;
+const TreeImg = styled.img`
+  position: relative;
+  z-index: 5;
 `;
 const ChainsawImg = styled.img`
   :hover {
