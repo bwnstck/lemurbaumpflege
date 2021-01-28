@@ -5,7 +5,7 @@ const StyledSection = styled.section<{ bright?: boolean }>`
   background-color: ${(props) => (props.bright ? "white" : "transparent")};
   margin-top: var(--nav-height);
   > :first-child {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     text-align: center;
   }
   > img {

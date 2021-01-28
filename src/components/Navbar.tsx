@@ -37,6 +37,7 @@ const NavContainer = styled.nav`
   align-items: center;
   padding: 1rem;
   height: var(--nav-height);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 
   img {
     height: 50px;

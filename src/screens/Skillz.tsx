@@ -13,6 +13,7 @@ const Skillz: FunctionComponent = () => {
       <h2>Leistungen</h2>
       <Card>
         <h3>
+          <div></div>
           <BeforeTree>
             <TreeImg src={Tree} alt="Baum" />
           </BeforeTree>
@@ -46,6 +47,7 @@ const Skillz: FunctionComponent = () => {
       <CardWrapper>
         <Card>
           <h3>
+            <div></div>
             <MagnifierGlass src={Magnifier} alt="Klettern" />
             Baumkontrolle
           </h3>
@@ -60,6 +62,7 @@ const Skillz: FunctionComponent = () => {
         </Card>
         <Card>
           <h3>
+            <div></div>
             <Flowers src={Tulip} alt="Tulpe" />
             Pflanzungsberatung
           </h3>
@@ -75,6 +78,7 @@ const Skillz: FunctionComponent = () => {
         </Card>
         <Card>
           <h3>
+            <div></div>
             <ChainsawImg src={Chainsaw} alt="Kettensäge" />
             Fällarbeiten
           </h3>
@@ -95,7 +99,8 @@ const Skillz: FunctionComponent = () => {
 const CardWrapper = styled.div`
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin-top: 2rem;
   img {
     transition: var(--transition);
   }

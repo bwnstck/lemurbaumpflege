@@ -9,17 +9,30 @@ const Card: FunctionComponent<CardProps> = ({ children }) => {
 };
 const CardWrapper = styled.div`
   position: relative;
-  padding: 1rem;
+  padding: 2rem 1rem 1rem;
   margin: 1rem;
-  border: 2px solid black;
+  border: 2px solid var(--text-dark);
   border-radius: 5px;
+  background: var(--text-primary);
   h3 {
+    position: relative;
     display: flex;
     align-items: center;
     position: absolute;
-    top: -1.4rem;
-    background: var(--primary);
-    padding: 0 0.5rem;
+    top: -2rem;
+    background: var(--text-primary);
+
+    padding: 0.5rem 1rem;
+    > :first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 32px;
+      border: 2px solid var(--text-dark);
+      border-bottom: none;
+      border-radius: 5px 5px 0 0;
+    }
     img {
       height: 40px;
       margin: auto 0.5rem;

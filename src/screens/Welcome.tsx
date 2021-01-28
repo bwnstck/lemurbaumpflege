@@ -18,9 +18,8 @@ const WelcomeContainer = styled.div`
   height: 100vh;
   margin-top: var(--nav-height);
   scroll-margin-top: var(--nav-height);
-  background: url(${BG});
-  background-size: cover;
-  background-position: center;
+  /* background: url(${BG}); */
+
   display: grid;
   place-content: center;
   button {

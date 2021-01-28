@@ -1,13 +1,22 @@
 import { createGlobalStyle } from "styled-components";
-
+import ForestBackground from "./assets/forestbackground.svg";
 const GlobalStyle = createGlobalStyle`
   :root {
-    --primary: #a7bc8f;
-    --text-primary: white;
-    --text-dark: black;
+    /* CSS HSL */
+--baby-powder: hsla(84, 15%, 94%, 1);
+--honeydew: hsla(101, 30%, 89%, 1);
+--eton-blue: hsla(112, 28%, 74%, 1);
+--russian-green: hsla(142, 19%, 47%, 1);
+--rich-black-forest: hsla(212, 59%, 9%, 1);
+
+    --primary: var(--eton-blue);
+    --text-primary: var(--baby-powder);
+    --text-dark: var(--rich-black-forest);
     --nav-height: 75px;
     --transition: all .5s ease-in
+
   }
+
   *,
   *::after,
   *::before {
@@ -17,7 +26,9 @@ const GlobalStyle = createGlobalStyle`
   }
   #root {
     min-height: 100vh;
-     background-color: var(--primary);
+     background:url(${ForestBackground}) ;
+       background-size: cover;
+  background-position: center;
   }
 
   body {

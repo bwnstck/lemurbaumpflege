@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import GlobalStyle from "./GlobalStyles";
 
-// import Wrapper from "./components/Wrapper";
+import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
 import Welcome from "./screens/Welcome";
 import Footer from "./components/Footer";
@@ -18,28 +18,28 @@ const App: FunctionComponent = () => {
     <Router>
       <GlobalStyle />
       <Navbar />
-      {/* <Wrapper> */}
-      <Switch>
-        <Route path="/aboutMe">
-          <AboutMe />
-        </Route>
-        <Route path="/kontakt">
-          <Contact />
-        </Route>
-        <Route path="/skillz">
-          <Skillz />
-        </Route>
-        <Route path="/qualifikationen">
-          <Qualifications />
-        </Route>
-        <Route path="/impressum">
-          <Impress />
-        </Route>
-        <Route path="/">
-          <Welcome />
-        </Route>
-      </Switch>
-      {/* </Wrapper> */}
+      <Wrapper>
+        <Switch>
+          <Route path="/aboutMe">
+            <AboutMe />
+          </Route>
+          <Route path="/kontakt">
+            <Contact />
+          </Route>
+          <Route path="/skillz">
+            <Skillz />
+          </Route>
+          <Route path="/qualifikationen">
+            <Qualifications />
+          </Route>
+          <Route path="/impressum">
+            <Impress />
+          </Route>
+          <Route path="/">
+            <Welcome />
+          </Route>
+        </Switch>
+      </Wrapper>
       <Footer />
     </Router>
   );
