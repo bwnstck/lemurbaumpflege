@@ -1,12 +1,23 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 import Card from "../components/Card";
+import Tree from "../assets/flaticons/tree-1.svg";
+import Chainsaw from "../assets/flaticons/chainsaw.svg";
+import Magnifier from "../assets/flaticons/search.svg";
+import Tulip from "../assets/flaticons/tulip.svg";
+import StyledSection from "../components/Section";
 
 const Skillz: FunctionComponent = () => {
   return (
-    <SkillzContainer>
+    <StyledSection>
+      <h2>Leistungen</h2>
       <Card>
-        <h2>Baumpflege</h2>
+        <h3>
+          <BeforeTree>
+            <TreeImg src={Tree} alt="Baum" />
+          </BeforeTree>
+          Baumpflege
+        </h3>
         <ul>
           <li>
             JUNGBAUM-PFLEGE Durch die frühe Pflege kann ein Baum sich gesund
@@ -34,7 +45,10 @@ const Skillz: FunctionComponent = () => {
       </Card>
       <CardWrapper>
         <Card>
-          <h2>Baumkontrolle</h2>
+          <h3>
+            <MagnifierGlass src={Magnifier} alt="Klettern" />
+            Baumkontrolle
+          </h3>
           <ul>
             <li>
               Als Eigentümer eines Grundstücks ist man auch für die
@@ -45,7 +59,10 @@ const Skillz: FunctionComponent = () => {
           </ul>
         </Card>
         <Card>
-          <h2>Pflanzungsberatung</h2>
+          <h3>
+            <Flowers src={Tulip} alt="Tulpe" />
+            Pflanzungsberatung
+          </h3>
           <ul>
             <li>
               Bäume werden in der Stadt leider oft in zu kleine Lebensräume
@@ -57,7 +74,10 @@ const Skillz: FunctionComponent = () => {
           </ul>
         </Card>
         <Card>
-          <h2>Fällarbeiten</h2>
+          <h3>
+            <ChainsawImg src={Chainsaw} alt="Kettensäge" />
+            Fällarbeiten
+          </h3>
           <ul>
             <li>
               Bäume an ungeeigneten Standorten oder geschädigte Bäume, die
@@ -69,15 +89,55 @@ const Skillz: FunctionComponent = () => {
           </ul>
         </Card>
       </CardWrapper>
-    </SkillzContainer>
+    </StyledSection>
   );
 };
-const SkillzContainer = styled.div`
-  height: 100vh;
-`;
 const CardWrapper = styled.div`
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  img {
+    transition: var(--transition);
+  }
+`;
+const BeforeTree = styled.div`
+  transition: var(--transition);
+  position: relative;
+  :hover {
+    &::before {
+      content: url(${Tree});
+      height: 35px;
+      width: 35px;
+      position: absolute;
+    }
+    &::after {
+      content: url(${Tree});
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      right: 0;
+      z-index: 4;
+    }
+  }
+`;
+const TreeImg = styled.img`
+  position: relative;
+  z-index: 5;
+`;
+const ChainsawImg = styled.img`
+  :hover {
+    transform: rotate(45deg);
+  }
+`;
+
+const MagnifierGlass = styled.img`
+  :hover {
+    transform: scale(1.2);
+  }
+`;
+const Flowers = styled.img`
+  :hover {
+    transform: scaleX(-1);
+  }
 `;
 export default Skillz;
