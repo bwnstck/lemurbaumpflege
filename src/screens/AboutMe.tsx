@@ -1,13 +1,14 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 import ChristophClimbing from "../assets/christoph_climbing.jpg";
+import Christoph from "../assets/profilePic.jpg";
 import StyledSection from "../components/Section";
 
 const AboutMe: FunctionComponent = () => {
   return (
     <AboutMeWrapper bright>
       <h2>Wer ich bin!</h2>
-      <img src={ChristophClimbing} alt="Christoph auf einem Baum" />
+      <img src={Christoph} alt="Christoph auf einem Baum" />
       <p>
         In der <b>Region Heilbronn</b> aufgewachsen war ich schon als Kind in
         der Natur unterwegs. Der Pfühlpark, der Neckar oder der Heilbronner Wald
@@ -75,14 +76,17 @@ const AboutMe: FunctionComponent = () => {
 };
 
 const AboutMeWrapper = styled(StyledSection)`
+text-align: center;
   img {
-    width: 100%;
-    border-radius: 5px;
+    width: 50%;
+    border-radius: 50%;
     margin: 1rem auto;
-    padding: 0 2rem;
+    border: 10px solid var(--primary);
+    max-width: 350px;
   }
   p {
     margin-bottom: 2rem;
+    text-align: left;
   }
 `;
 export default AboutMe;
