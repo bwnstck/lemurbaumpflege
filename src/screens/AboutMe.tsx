@@ -1,13 +1,13 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import ChristophClimbing from "../assets/christoph_climbing.jpg";
+// import ChristophClimbing from "../assets/christoph_climbing.jpg";
 import Christoph from "../assets/profilePic.jpg";
-import StyledSection from "../components/Section";
+import StyledSection from "../components/StyledSection";
 
 const AboutMe: FunctionComponent = () => {
   return (
     <AboutMeWrapper bright>
-      <h2>Wer ich bin!</h2>
+      <h1>Wer ich bin!</h1>
       <img src={Christoph} alt="Christoph auf einem Baum" />
       <p>
         In der <b>Region Heilbronn</b> aufgewachsen war ich schon als Kind in
@@ -76,7 +76,7 @@ const AboutMe: FunctionComponent = () => {
 };
 
 const AboutMeWrapper = styled(StyledSection)`
-text-align: center;
+  text-align: center;
   img {
     width: 50%;
     border-radius: 50%;

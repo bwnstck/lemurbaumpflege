@@ -1,17 +1,27 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 import Lemur from "../assets/logo.png";
+import StyledLink from "./StyledLink";
 
 const Navbar: FunctionComponent = () => {
   return (
     <NavContainer>
-      <img src={Lemur} alt="Lemur" />
+      <StyledLink to="/">
+        <img src={Lemur} alt="Lemur" />
+      </StyledLink>
       <ul>
-        <li>Wer bin ich</li>
-        <li>Qualifikationen</li>
-        <li>Leistungen</li>
-        <li>Kontakt</li>
-        <li>Impressum</li>
+        <li>
+          <StyledLink to="/aboutMe">Wer bin ich</StyledLink>
+        </li>
+        <li>
+          <StyledLink to="/qualifikationen">Qualifikationen</StyledLink>
+        </li>
+        <li>
+          <StyledLink to="/skillz">Leistungen</StyledLink>
+        </li>
+        <li>
+          <StyledLink to="/kontakt">Kontakt</StyledLink>
+        </li>
       </ul>
     </NavContainer>
   );

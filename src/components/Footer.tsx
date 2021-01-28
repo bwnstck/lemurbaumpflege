@@ -1,12 +1,11 @@
 import { FunctionComponent } from "react";
 import styled from "styled-components";
+import StyledLink from "./StyledLink";
 
 const Footer: FunctionComponent = () => {
   return (
     <FooterContainer>
-      <a href="../screens/Impress">
-      Impressum
-      </a>
+      <StyledLink to="impressum">Impressum</StyledLink>
       <span>
         Made with ❤️ by <a href="weinstock.it">bwnstck</a>
       </span>

@@ -5,7 +5,7 @@ import Tree from "../assets/flaticons/tree-1.svg";
 import Chainsaw from "../assets/flaticons/chainsaw.svg";
 import Magnifier from "../assets/flaticons/search.svg";
 import Tulip from "../assets/flaticons/tulip.svg";
-import StyledSection from "../components/Section";
+import StyledSection from "../components/StyledSection";
 
 const Skillz: FunctionComponent = () => {
   return (

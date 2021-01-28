@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import StyledSection from "../components/Section";
+import StyledSection from "../components/StyledSection";
 
 const Impress: FC = () => {
   return (
