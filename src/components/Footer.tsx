@@ -4,6 +4,9 @@ import styled from "styled-components";
 const Footer: FunctionComponent = () => {
   return (
     <FooterContainer>
+      <a href="../screens/Impress">
+      Impressum
+      </a>
       <span>
         Made with ❤️ by <a href="weinstock.it">bwnstck</a>
       </span>

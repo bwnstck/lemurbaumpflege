@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Skillz from "./screens/Skillz";
 import AboutMe from "./screens/AboutMe";
 import Qualifications from "./screens/Qualifications";
+import Impress from "./screens/Impress";
 
 const App: FunctionComponent = () => {
   return (
@@ -19,6 +20,7 @@ const App: FunctionComponent = () => {
         <AboutMe />
         <Skillz />
         <Qualifications />
+        <Impress/>
       </Wrapper>
       <Footer />
     </>
