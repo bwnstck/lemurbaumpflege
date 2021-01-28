@@ -1,9 +1,7 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 import Lemur from "../assets/logo.png";
-// type NavbarProps = {
-//   children: ReactNode;
-// };
+
 const Navbar: FunctionComponent = () => {
   return (
     <NavContainer>
@@ -20,6 +18,7 @@ const Navbar: FunctionComponent = () => {
 };
 const NavContainer = styled.nav`
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
