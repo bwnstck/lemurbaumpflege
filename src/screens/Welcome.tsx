@@ -1,14 +1,15 @@
 import React, { FunctionComponent } from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import BG from "../assets/background.png";
-
+import Logo from "../assets/logo.png";
 const Welcome: FunctionComponent = () => {
   const history = useHistory();
   return (
     <WelcomeContainer>
-      <h1>Lemur Baumpflege</h1>
+      <img src={Logo} alt="Lemur-Logo" />
       <hr />
+      <h1>Baumpflege</h1>
+
       <button onClick={() => history.push("/aboutme")}>Auf gehts!</button>
     </WelcomeContainer>
   );
@@ -18,10 +19,16 @@ const WelcomeContainer = styled.div`
   height: 100vh;
   margin-top: var(--nav-height);
   scroll-margin-top: var(--nav-height);
-  /* background: url(${BG}); */
-
   display: grid;
   place-content: center;
+  text-align: center;
+  img {
+    height: 250px;
+  }
+  hr {
+    margin: 1rem 0;
+  }
+
   button {
     margin: 1rem 4rem;
     padding: 0.5rem 1rem;

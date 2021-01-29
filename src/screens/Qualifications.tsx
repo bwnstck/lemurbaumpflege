@@ -5,13 +5,22 @@ import Timeline from "../components/Timeline";
 
 const Qualifications: FunctionComponent = () => {
   return (
-    <QualificationWrapper bright>
+    <QualificationWrapper>
       <h2>Qualifikationen</h2>
-      <Timeline />
+      <div>
+        <Timeline />
+      </div>
     </QualificationWrapper>
   );
 };
 
-const QualificationWrapper = styled(StyledSection)``;
+const QualificationWrapper = styled(StyledSection)`
+  min-height: 75vh;
+  position: relative;
+  > div {
+    position: absolute;
+    height: 100%;
+  }
+`;
 
 export default Qualifications;

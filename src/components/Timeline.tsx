@@ -6,8 +6,8 @@ const Timeline: FC = () => {
   return (
     <Chrono
       items={timelineData}
-      mode="VERTICAL"
-      slideShow
+      mode="VERTICAL_ALTERNATING"
+      // slideShow
       slideItemDuration={4000}
       scrollable={{ scrollbar: false }}
     />
