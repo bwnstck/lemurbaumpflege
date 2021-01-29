@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import { useHistory } from "react-router-dom";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import Logo from "../assets/logo.png";
 const Welcome: FunctionComponent = () => {
   const history = useHistory();
@@ -16,7 +16,7 @@ const Welcome: FunctionComponent = () => {
 };
 
 const WelcomeContainer = styled.div`
-  height: 100vh;
+  height: calc(100vh - var(--nav-height));
   margin-top: var(--nav-height);
   scroll-margin-top: var(--nav-height);
   display: grid;

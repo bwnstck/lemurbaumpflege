@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import StyledLink from "./StyledLink";
 
 const Footer: FunctionComponent = () => {
@@ -16,5 +16,6 @@ const FooterContainer = styled.footer`
   display: grid;
   place-content: center;
   padding: 1rem;
+  background-color: var(--russian-green);
 `;
 export default Footer;

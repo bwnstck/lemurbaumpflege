@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactNode } from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 interface WrapperProps {
   children: ReactNode;
@@ -14,5 +14,6 @@ const WrapperContainer = styled.div`
   max-width: 1200px;
   margin: auto;
   padding: 1rem clamp(0.1rem, 2vw, 1rem);
+  overflow: auto;
 `;
 export default Wrapper;

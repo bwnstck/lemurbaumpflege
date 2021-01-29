@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const StyledSection = styled.section<{ bright?: boolean }>`
   padding: 1rem;

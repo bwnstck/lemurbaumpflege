@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import Card from "../components/Card";
 import Tree from "../assets/flaticons/tree-1.svg";
 import Chainsaw from "../assets/flaticons/chainsaw.svg";
 import Magnifier from "../assets/flaticons/search.svg";
-import Tulip from "../assets/flaticons/tulip.svg";
+import TreeLove from "../assets/flaticons/love.svg";
 import StyledSection from "../components/StyledSection";
 
 const Skillz: FunctionComponent = () => {
@@ -21,25 +21,29 @@ const Skillz: FunctionComponent = () => {
         </h3>
         <ul>
           <li>
-            JUNGBAUM-PFLEGE Durch die frühe Pflege kann ein Baum sich gesund
-            entwickeln und die kleinen Schnittstellen gut überwallen.
+            <h4> JUNGBAUM-PFLEGE</h4>
+            Durch die frühe Pflege kann ein Baum sich gesund entwickeln und die
+            kleinen Schnittstellen gut überwallen.
           </li>
           <li>
-            TOTHOLZ-ENTFERNUNG Um die Verkehrssicherheit herzustellen werden
-            Tote und abgerissene Äste entfernt.
+            <h4>TOTHOLZ-ENTFERNUNG </h4>
+            Um die Verkehrssicherheit herzustellen werden Tote und abgerissene
+            Äste entfernt.
           </li>
           <li>
-            KRONENPFLEGEFehlentwicklungen in der Krone werden entnommen, tote
-            und reibende Äste entfernt sowie an Straßen und Wegen das
-            Lichtraumprofil wieder hergestellt.
+            <h4>KRONENPFLEGE</h4>
+            Fehlentwicklungen in der Krone werden entnommen, tote und reibende
+            Äste entfernt sowie an Straßen und Wegen das Lichtraumprofil wieder
+            hergestellt.
           </li>
           <li>
-            KRONENKÜRZUNGDie Baumkrone wird aus statischen oder gestalterischen
-            Gründen in Ihrer Höhe oder Breite verringert, es kann auch nur an
-            Teilen der Krone vorgenommen werden (Kronenteileinkürzung).
+            <h4>KRONENKÜRZUNG</h4> Die Baumkrone wird aus statischen oder
+            gestalterischen Gründen in Ihrer Höhe oder Breite verringert, es
+            kann auch nur an Teilen der Krone vorgenommen werden
+            (Kronenteileinkürzung).
           </li>
           <li>
-            OBSTBAUM-SCHNITTGesunderhaltung der Krone, Vorbeugung von
+            <h4>OBSTBAUM-SCHNITT</h4> Gesunderhaltung der Krone, Vorbeugung von
             Austausbrüchen durch Obstbehang.
           </li>
         </ul>
@@ -63,7 +67,9 @@ const Skillz: FunctionComponent = () => {
         <Card>
           <h3>
             <div></div>
-            <Flowers src={Tulip} alt="Tulpe" />
+            <BeforeGrow>
+              <img src={TreeLove} alt="Tulpe" />
+            </BeforeGrow>
             Pflanzungsberatung
           </h3>
           <ul>
@@ -99,7 +105,7 @@ const Skillz: FunctionComponent = () => {
 const CardWrapper = styled.div`
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   margin-top: 2rem;
   img {
     transition: var(--transition);
@@ -125,6 +131,7 @@ const BeforeTree = styled.div`
     }
   }
 `;
+
 const TreeImg = styled.img`
   position: relative;
   z-index: 5;
@@ -140,9 +147,31 @@ const MagnifierGlass = styled.img`
     transform: scale(1.2);
   }
 `;
-const Flowers = styled.img`
+const BeforeGrow = styled.div`
+  transition: var(--transition);
+  position: relative;
+  &::before {
+    opacity: 0;
+  }
   :hover {
-    transform: scaleX(-1);
+    &::before {
+      opacity: 1;
+      content: url(${Tree});
+      height: 35px;
+      width: 35px;
+      position: absolute;
+    }
+    &::after {
+      content: url(${Tree});
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      right: 0;
+      z-index: 4;
+    }
+    img {
+      opacity: 0;
+    }
   }
 `;
 export default Skillz;

@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import StyledSection from "../components/StyledSection";
 import Timeline from "../components/Timeline";
 

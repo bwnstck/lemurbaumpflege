@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ReactNode } from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 interface CardProps {
   children: ReactNode;
@@ -19,8 +19,9 @@ const CardWrapper = styled.div`
     display: flex;
     align-items: center;
     position: absolute;
-    top: -2rem;
+    top: -3.5rem;
     background: var(--text-primary);
+    border-radius: 5px;
 
     padding: 0.5rem 1rem;
     > :first-child {
