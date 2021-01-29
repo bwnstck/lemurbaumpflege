@@ -23,7 +23,7 @@ const Transparency: FC = () => {
       </p>
       <div>
         <h2>Aufschlüsselung nach Auftragsart</h2>
-        <Doughnut data={doughnutData} options={doughnutOptions} />
+        <Doughnut height={250} data={doughnutData} options={doughnutOptions} />
       </div>
     </TransparencyWrapper>
   );
