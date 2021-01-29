@@ -20,6 +20,9 @@ const Navbar: FunctionComponent = () => {
           <StyledLink to="/skillz">Leistungen</StyledLink>
         </li>
         <li>
+          <StyledLink to="/transparenz">Transparenz</StyledLink>
+        </li>
+        <li>
           <StyledLink to="/kontakt">Kontakt</StyledLink>
         </li>
       </ul>

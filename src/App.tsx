@@ -12,6 +12,7 @@ import AboutMe from "./screens/AboutMe";
 import Qualifications from "./screens/Qualifications";
 import Impress from "./screens/Impress";
 import Contact from "./screens/Contact";
+import Transparency from "./screens/Transparency";
 
 const App: FunctionComponent = () => {
   return (
@@ -20,6 +21,9 @@ const App: FunctionComponent = () => {
       <Navbar />
       <Wrapper>
         <Switch>
+          <Route path="/transparenz">
+            <Transparency />
+          </Route>
           <Route path="/aboutMe">
             <AboutMe />
           </Route>

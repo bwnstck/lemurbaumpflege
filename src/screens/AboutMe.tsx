@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 // import ChristophClimbing from "../assets/christoph_climbing.jpg";
-import Christoph from "../assets/profilePic.jpg";
+import Christoph from "../assets/profilePicBoss.jpg";
 import StyledSection from "../components/StyledSection";
 
 const AboutMe: FunctionComponent = () => {
