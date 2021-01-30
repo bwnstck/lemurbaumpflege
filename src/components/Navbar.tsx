@@ -41,7 +41,7 @@ const NavContainer = styled.nav`
   justify-content: space-between;
   padding: 1rem;
   height: var(--nav-height);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 -2px 10px var(--bg-overlay);
   img {
     height: 50px;
     margin-right: 1rem;

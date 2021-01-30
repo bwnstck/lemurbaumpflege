@@ -7,7 +7,7 @@ import StyledSection from "../components/StyledSection";
 const AboutMe: FunctionComponent = () => {
   return (
     <AboutMeWrapper>
-      <h1>Wer ich bin!</h1>
+      <h1>Über mich:</h1>
       <img src={Christoph} alt="Christoph auf einem Baum" />
       <div>
         <p>
@@ -84,7 +84,6 @@ const AboutMeWrapper = styled(StyledSection)`
     width: 50%;
     border-radius: 50%;
     margin: 1rem auto;
-    border: 10px solid var(--russian-green);
     max-width: 350px;
   }
   div {

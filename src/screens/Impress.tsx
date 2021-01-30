@@ -1,9 +1,10 @@
 import React, { FC } from "react";
+import styled from "styled-components";
 import StyledSection from "../components/StyledSection";
 
 const Impress: FC = () => {
   return (
-    <StyledSection bright>
+    <ImpressWrapper bright>
       <h1>Impressum</h1>
       <h5>Domaininhaber und verantwortlich für den Inhalt: </h5>
       <p>Lemur Baumpflege Christoph Mössinger</p>
@@ -85,8 +86,12 @@ const Impress: FC = () => {
         und für alle Inhalte der Seiten, zu denen die bei uns veröffentlichten
         Banner und Links führen.
       </p>
-    </StyledSection>
+    </ImpressWrapper>
   );
 };
-
+const ImpressWrapper = styled(StyledSection)`
+  h5 {
+    text-align: center;
+  }
+`;
 export default Impress;

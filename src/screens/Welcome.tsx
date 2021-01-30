@@ -2,6 +2,8 @@ import React, { FunctionComponent } from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components/macro";
 import Logo from "../assets/logo.png";
+import Login from "../assets/flaticons/login.svg";
+
 const Welcome: FunctionComponent = () => {
   const history = useHistory();
   return (
@@ -10,7 +12,9 @@ const Welcome: FunctionComponent = () => {
       <h1>Baumpflege</h1>
       <hr />
       <h2>Christoph Mössinger</h2>
-      <button onClick={() => history.push("/aboutme")}>Auf gehts!</button>
+      <button onClick={() => history.push("/aboutme")}>
+        <img src={Login} alt="login" />
+      </button>
     </WelcomeContainer>
   );
 };
@@ -34,7 +38,8 @@ const WelcomeContainer = styled.div`
     margin: 0.5rem auto;
   }
   h2 {
-    color: var(--primary);
+    color: var(--text-primary);
+    font-size: 1.5rem;
     text-shadow: 0 0 5px var(--text-dark);
   }
   button {
@@ -42,6 +47,15 @@ const WelcomeContainer = styled.div`
     padding: 0.5rem 1rem;
     font-size: 1.1rem;
     border: none;
+    background: none;
+    img {
+      height: 50px;
+      transition: var(--transition);
+      :hover {
+        filter: drop-shadow(0 0 1px var(--text-primary));
+        transform: scale(1.1);
+      }
+    }
   }
 `;
 
