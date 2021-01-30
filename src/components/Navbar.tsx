@@ -9,15 +9,15 @@ const Navbar: FunctionComponent = () => {
       <StyledLink to="/">
         <img src={Lemur} alt="Lemur" />
       </StyledLink>
-      <ul>
+      <ul className="NavBar">
         <li>
-          <StyledLink to="/aboutMe">Wer bin ich</StyledLink>
-        </li>
-        <li>
-          <StyledLink to="/qualifikationen">Qualifikationen</StyledLink>
+          <StyledLink to="/aboutMe">Über mich</StyledLink>
         </li>
         <li>
           <StyledLink to="/skillz">Leistungen</StyledLink>
+        </li>
+        <li>
+          <StyledLink to="/qualifikationen">Qualifikationen</StyledLink>
         </li>
         <li>
           <StyledLink to="/transparenz">Transparenz</StyledLink>
@@ -35,13 +35,13 @@ const NavContainer = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--primary);
+  background: var(--text-primary);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem;
   height: var(--nav-height);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-
   img {
     height: 50px;
     margin-right: 1rem;
@@ -49,6 +49,18 @@ const NavContainer = styled.nav`
   ul {
     display: flex;
     list-style-type: none;
+    margin-right: 2rem;
+    li > {
+      a {
+        transition: var(--transition);
+        /* color: var(--text-primary); */
+        text-decoration-color: transparent;
+        :hover {
+          text-decoration: underline solid var(--paradise-pink) 2px;
+        }
+      }
+    }
+
     *:not(:first-child) {
       margin-left: 1rem;
     }

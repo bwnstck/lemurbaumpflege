@@ -4,16 +4,21 @@ const GlobalStyle = createGlobalStyle`
   :root {
     /* CSS HSL */
     --baby-powder: hsla(84, 15%, 94%, 1);
+    --bg-overlay2: hsla(84, 15%, 94%, .3);
     --honeydew: hsla(101, 30%, 89%, 1);
     --eton-blue: hsla(112, 28%, 74%, 1);
     --russian-green: hsla(142, 19%, 47%, 1);
     --rich-black-forest: hsla(212, 59%, 9%, 1);
+    --bg-overlay: hsla(212, 59%, 9%, 1);
+    --prussian-blue: hsla(210, 53%, 15%, 1);
+    --medium-champagne: hsla(48, 67%, 79%, 1);
+    --paradise-pink: hsla(349, 78%, 62%, 1);
 
     --primary: var(--eton-blue);
     --text-primary: var(--baby-powder);
     --text-dark: var(--rich-black-forest);
     --nav-height: 75px;
-    --transition: all 0.5s ease-in;
+    --transition: all 0.3s ease-in-out;
   }
 
   *,
@@ -25,7 +30,11 @@ const GlobalStyle = createGlobalStyle`
   }
   #root {
     height: 100vh;
-    background: url(${ForestBackground});
+    background: linear-gradient(
+          rgba(0, 0, 0, 0.2),
+          var(--bg-overlay2)
+          /* var(--bg-overlay) */
+        ), url(${ForestBackground});
     background-size: cover;
     background-position: center;
   }
@@ -44,10 +53,17 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 0.2rem;
     margin: 1.5rem auto 1rem;
   }
+  h1{
+    font-size: 2rem;
+  }
+
   p {
     line-height: 2;
     max-width: 70ch;
     margin: auto;
+  }
+  b{
+    color: var(--paradise-pink)
   }
   ul {
     list-style-type: none;

@@ -7,9 +7,9 @@ const Welcome: FunctionComponent = () => {
   return (
     <WelcomeContainer>
       <img src={Logo} alt="Lemur-Logo" />
-      <hr />
       <h1>Baumpflege</h1>
-
+      <hr />
+      <h2>Christoph Mössinger</h2>
       <button onClick={() => history.push("/aboutme")}>Auf gehts!</button>
     </WelcomeContainer>
   );
@@ -26,9 +26,17 @@ const WelcomeContainer = styled.div`
     height: 250px;
   }
   hr {
-    margin: 1rem 0;
+    margin: 0.1rem 0;
+    color: var(--primary);
   }
-
+  h1,
+  h2 {
+    margin: 0.5rem auto;
+  }
+  h2 {
+    color: var(--primary);
+    text-shadow: 0 0 5px var(--text-dark);
+  }
   button {
     margin: 1rem 4rem;
     padding: 0.5rem 1rem;

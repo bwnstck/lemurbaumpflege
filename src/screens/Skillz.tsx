@@ -5,12 +5,13 @@ import Tree from "../assets/flaticons/tree-1.svg";
 import Chainsaw from "../assets/flaticons/chainsaw.svg";
 import Magnifier from "../assets/flaticons/search.svg";
 import TreeLove from "../assets/flaticons/love.svg";
+import Certificate from "../assets/flaticons/certificate.svg";
 import StyledSection from "../components/StyledSection";
 
 const Skillz: FunctionComponent = () => {
   return (
     <StyledSection>
-      <h2>Leistungen</h2>
+      <h1>Leistungen</h1>
       <Card>
         <h3>
           <div></div>
@@ -98,6 +99,24 @@ const Skillz: FunctionComponent = () => {
             </li>
           </ul>
         </Card>
+        <Card>
+          <h3>
+            <div></div>
+            <CertificateImg src={Certificate} alt="Kettensäge" />
+            Gutachten
+          </h3>
+          <ul>
+            <li>
+              Für Beratung beim <b>Baumschutz auf Baustellen</b> oder der
+              Bauaufsicht bei Erdarbeiten im Wurzelbereich, gerne unterstütze
+              ich Sie dabei. Der Baum ist ein Lebensraum für viele Tiere, die
+              Kontrolle und Erfassung der Baumbewohner kann in einem{" "}
+              <b> Artenschutz</b> Gutachten erfasst werden. Auch Beringungen von
+              Vögeln oder ähnliche Projekte werden durch das Baumklettern gerne
+              unterstützt
+            </li>
+          </ul>
+        </Card>
       </CardWrapper>
     </StyledSection>
   );
@@ -139,6 +158,11 @@ const TreeImg = styled.img`
 const ChainsawImg = styled.img`
   :hover {
     transform: rotate(45deg);
+  }
+`;
+const CertificateImg = styled.img`
+  :hover {
+    transform: rotate(1turn);
   }
 `;
 
