@@ -11,39 +11,25 @@ const AboutMe: FunctionComponent = () => {
     <AboutMeWrapper>
       <h1>Über mich:</h1>
       <img src={Christoph} alt="Christoph as a Gangmember" />
-      <h2>Bio Length</h2>
       <BioLength>
-        <div className="RadioButton">
-          <label htmlFor="s">
-            <input
-              type="radio"
-              name="s"
-              checked={textLength === "s"}
-              onClick={() => setTextLength("s")}
-            />
-          </label>
-        </div>
-        <hr />
-        <div className="RadioButton">
-          <label htmlFor="m">
-            <input
-              type="radio"
-              name="m"
-              checked={textLength === "m"}
-              onClick={() => setTextLength("m")}
-            />
-          </label>
-        </div>
-        <hr />
-        <div className="RadioButton">
-          <label htmlFor="l">
-            <input
-              type="radio"
-              name="l"
-              checked={textLength === "l"}
-              onClick={() => setTextLength("l")}
-            />
-          </label>
+        <h2>Textlänge</h2>
+        <div>
+          <span>kurz</span>
+          <RadioButton
+            checked={textLength === "s"}
+            onClick={() => setTextLength("s")}
+          />
+          <hr />
+          <RadioButton
+            checked={textLength === "m"}
+            onClick={() => setTextLength("m")}
+          />
+          <hr />
+          <RadioButton
+            checked={textLength === "l"}
+            onClick={() => setTextLength("l")}
+          />
+          <span>lang</span>
         </div>
       </BioLength>
       <TextBox>
@@ -139,15 +125,54 @@ const AboutMe: FunctionComponent = () => {
   );
 };
 const BioLength = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 400px;
+  max-width: 350px;
   margin: auto auto 1rem;
+  background-color: var(--text-primary);
+  padding: 0.5em 1.5em;
+  border-radius: 5px;
+  h2 {
+    margin: 0.5rem auto;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      margin: auto 0.5rem;
+    }
+  }
+
   hr {
     width: 3rem;
-    color: red;
+    color: var(--paradise-pink);
     height: 2px;
+  }
+`;
+const RadioButton = styled.div<{
+  checked: boolean;
+  onClick: VoidFunction;
+}>`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--paradise-pink);
+  padding: 1rem;
+  cursor: pointer;
+  background: rgb(143, 3, 89);
+  transition: background 1s ease;
+  background: ${(props) =>
+    props.checked
+      ? "radial-gradient(circle, var(--paradise-pink) 0%,var(--paradise-pink) 50%, white 80%)"
+      : "transparent"};
+  &&:hover,
+  :focus {
+    background: radial-gradient(
+      circle,
+      var(--paradise-pink) 0%,
+      var(--paradise-pink) 50%,
+      white 80%
+    );
   }
 `;
 const AboutMeWrapper = styled(StyledSection)`

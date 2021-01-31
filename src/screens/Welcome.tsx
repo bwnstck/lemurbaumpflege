@@ -27,7 +27,9 @@ const WelcomeContainer = styled.div`
   place-content: center;
   text-align: center;
   img {
-    height: 250px;
+    height: 200px;
+    height: clamp(120px, 20vw, 250px);
+    margin: auto;
   }
   hr {
     margin: 0.1rem 0;

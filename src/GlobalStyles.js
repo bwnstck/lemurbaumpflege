@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components/macro";
-import ForestBackground from "./assets/forestbackground.svg";
+import ForestBackground from "./assets/forestbackground.jpg";
 const GlobalStyle = createGlobalStyle`
   :root {
     /* CSS HSL */

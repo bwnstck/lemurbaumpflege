@@ -7,7 +7,7 @@ const Footer: FunctionComponent = () => {
     <FooterContainer>
       <StyledLink to="impressum">Impressum</StyledLink>
       <span>
-        Made with ❤️ by <a href="weinstock.it">weinstock.it</a>
+        handcrafted with ❤️ by <a href="weinstock.it">weinstock.it</a>
       </span>
     </FooterContainer>
   );
@@ -22,6 +22,9 @@ const FooterContainer = styled.footer`
   a {
     color: var(--text-primary);
     margin-bottom: 0.5rem;
+  }
+  span {
+    font-size: 0.75rem;
   }
 `;
 export default Footer;
