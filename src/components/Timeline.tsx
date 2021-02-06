@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { Chrono } from "react-chrono";
 import timelineData from "../lib/timelineData";
 import Tree from "../assets/flaticons/tree-1.svg";
+
 const Timeline: FC = () => {
   return (
     <Chrono

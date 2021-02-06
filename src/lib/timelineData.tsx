@@ -1,21 +1,21 @@
-const timelineData = [
+import { TimelineItemModel } from "react-chrono/dist/models/TimelineItemModel";
+import Cyprus from "../assets/timeline/zypern.jpg";
+
+const timelineData: TimelineItemModel[] = [
   {
     title: "Januar 2020",
     cardTitle: "Mitgliedschaft",
     cardSubtitle: "Mitglied Deutschen Dendrologischen Gesellschaft ev",
-    // cardDetailedText: `?????`,
   },
   {
     title: "Januar 2019",
     cardTitle: "BUGA",
     cardSubtitle: "Mitgestaltung des Bunten Klassenzimmer BUGA Heilbronn",
-    // cardDetailedText: `??????`,
   },
   {
     title: "Oktober 2017",
     cardTitle: "Zertifizierung",
     cardSubtitle: "SKT B Schein",
-    // cardDetailedText: `??????`,
   },
   {
     title: "Januar 2017",
@@ -33,10 +33,30 @@ const timelineData = [
     Umweltschutz, Arbeitssicherheit und Rechtsvorschriften`,
   },
   {
+    title: "September 2016",
+    cardTitle: "Gründung",
+    cardSubtitle: "Lemur Baumpflege in Heilbronn",
+  },
+  {
+    title: "August 2016",
+    cardTitle: "Zertifizierung",
+    cardSubtitle: "Pflanzenschutzausweis",
+  },
+  {
     title: "Oktober 2015",
     cardTitle: "Schulung",
-    cardSubtitle: "Hubarbeitsbühnen Schein????",
+    cardSubtitle: "Schein für Hubarbeitsbühnen",
     cardDetailedText: `Bedienerschulung Hubarbeitsbühnen`,
+  },
+  {
+    title: "August 2015",
+    cardTitle: "Weiterbildung",
+    cardSubtitle: (
+      <>
+        <p>Forestfire Protection Management in Cyprus </p>
+        <img width="100%" height="100%" src={Cyprus} alt="Zypern" />
+      </>
+    ),
   },
   {
     title: "Dezember 2014",
@@ -66,7 +86,7 @@ const timelineData = [
   },
 
   {
-    title: "??????",
+    title: "2016",
     cardTitle: "Zertifizierung",
     cardSubtitle: `FLL zertifizierter Baumkontrolleur`,
     cardDetailedText: `Er ist eine Zertifizierung in der Baumkontrolle um Bäume fachlich
@@ -78,12 +98,6 @@ const timelineData = [
     cardSubtitle: `PSA`,
     cardDetailedText: `Sachkundenachweis für Pflanzenschutzmittel wird benötigt um
             Pflanzenschutzmittel ausbringen zu dürfen`,
-  },
-  {
-    title: "??????",
-    cardTitle: "Weiterbildung",
-    cardSubtitle: `Forestfire Protection Management in Cyprus`,
-    // cardDetailedText: `?????`,
   },
   {
     title: "??????",
