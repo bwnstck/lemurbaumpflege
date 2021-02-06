@@ -7,22 +7,43 @@ const Transparency: FC = () => {
   return (
     <TransparencyWrapper>
       <h1>Transparenz</h1>
+      <h2>Nachhaltigkeit</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium,
-        consectetur odio molestiae corrupti quibusdam ab, deleniti quo commodi
-        ratione, quasi consequatur maiores tempore fugiat officia dolorem esse.
-        Quas velit nisi reiciendis fugiat, nam cumque dolorem, eius quisquam
-        ipsum, eligendi ratione ullam alias aperiam exercitationem tenetur
-        repellendus. Quo officiis earum ratione ex, rem corrupti. Deserunt amet
-        veritatis distinctio. Corporis sapiente eveniet exercitationem
-        consequatur. Sunt commodi nesciunt delectus cum, molestiae at dolores
-        rem. Magnam amet, aspernatur vitae necessitatibus, aliquam cupiditate
-        iste ipsum sequi distinctio, molestias vero at. Tempore necessitatibus,
-        excepturi quis minus assumenda iste itaque recusandae animi quod saepe
-        esse, cupiditate optio?
+        Arbeiten im Grünenbereich heißt für mich auch Nachhaltig zu arbeiten.
+        Möglichst viele Wege mit Fahrrad, der richtige Sprit, nachhaltige
+        Entsorgung zusammen arbeiten um Ressourcen zu schonen.
+      </p>
+      <h2>Umweltbewusstsein </h2>
+      <h3>Entsorgung</h3>
+      <p>
+        Schnittgut kann vor Ort gehäckselt werden und auf Wegen und als
+        Mulchschicht wieder in den Garte eingebracht werden. Die Biomasse bleibt
+        dem Garten erhalten, es gibt keine unnötigen Wege der Entsorgung.
+        Kraftstoffe: Die meisten Maschinen laufen über Akku und werden im
+        Optimalfall vom eigenen Solarstrom geladen. Wenn es Benzin sein muss
+        dann von Cleanlife (https://clean-life.de/), einer der transparentesten
+        und sauberen Erzeuger von Kraftstoffen. Ortstermine in Heilbronn mit dem
+        Rad, Baustellen ohne Entsorgung mit dem Lastenrad. Reduzierung des
+        Fuhrparks.
+      </p>
+      <h3>Sharing Economy</h3>
+      <p>
+        Jeder Maschine verbraucht Ressorcen und Energie in der Produktion. Der
+        Kauf von Maschinen kann für einen Betrieb wirtschaftlich sein, ist aber
+        dann noch lange nicht nachhaltig für die Umwelt. Mit Kollegen teilen wir
+        uns Maschinen oder mieten Sie um nachhaltig für die Natur zu arbeiten.
       </p>
       <div>
         <h2>Aufschlüsselung nach Auftragsart</h2>
+        <p>
+          privat Kundschaft (Dort besteht der größte Freiraum für fachgerechte
+          Baumpflege und eine Langfristige Begleitung für einen Baumerhalt.)
+          Städte und Kommunen (Die Herrausforderung Behörden für Nachhaltige
+          Baumpflege zu begeistern) Soziale Träger (gemeinsammes Erarbeiten von
+          Pflege Konzepten) Subunternehmer ( Austausch von Wissenschaft und
+          Technik und gemeinsames Erarbeiten von Großprojekten, Schlossanlagen
+          und Parkflächen)
+        </p>
         <Doughnut height={250} data={doughnutData} options={doughnutOptions} />
       </div>
     </TransparencyWrapper>
