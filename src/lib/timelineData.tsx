@@ -1,5 +1,8 @@
 import { TimelineItemModel } from "react-chrono/dist/models/TimelineItemModel";
 import Cyprus from "../assets/timeline/zypern.jpg";
+import Chainsaw from "../assets/timeline/chainsaw.jpg";
+import PSA from "../assets/timeline/psa.jpg";
+import FAW from "../assets/timeline/faw.jpg";
 
 const timelineData: TimelineItemModel[] = [
   {
@@ -26,7 +29,12 @@ const timelineData: TimelineItemModel[] = [
   {
     title: "Januar 2017",
     cardTitle: "FAW",
-    cardSubtitle: `Fachagrarwirt für Baumpflege und Baumsanierung`,
+    cardSubtitle: (
+      <>
+        <p>Fachagrarwirt für Baumpflege und Baumsanierung</p>
+        <img width="100%" height="100%" src={FAW} alt="FAW" />
+      </>
+    ),
     cardDetailedText: `ist eine Ausbildung
     um Arbeiten im und am Baum auszuführen, zu planen und auch zu
     beurteilen. Die Schwerpunkte im Bereich Baumpflege sind
@@ -61,13 +69,23 @@ const timelineData: TimelineItemModel[] = [
   {
     title: "Dezember 2014",
     cardTitle: "Schulung",
-    cardSubtitle: "Sachkundiger für PSA",
+    cardSubtitle: (
+      <>
+        <p>Sachkundiger für PSA </p>
+        <img width="100%" height="100%" src={PSA} alt="PSA" />
+      </>
+    ),
     cardDetailedText: `Sachkundiger für PSA gegen Absturz nach BGG 906`,
   },
   {
     title: "Juli 2014",
     cardTitle: "Zertifizierung",
-    cardSubtitle: `SKT A`,
+    cardSubtitle: (
+      <>
+        <p>SKT A</p>
+        <img width="100%" height="100%" src={Chainsaw} alt="Kettensäge" />
+      </>
+    ),
     cardDetailedText: ` Seilklettertechnik für Baumpflege erlaubt den Zustieg mit dem Seil
             in den Baum und das Arbeiten mit der Handsäge/Kettensäge`,
   },
