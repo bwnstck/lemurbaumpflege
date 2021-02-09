@@ -6,7 +6,7 @@ import FAW from "../assets/timeline/faw.jpg";
 import { ReactNode } from "react";
 
 interface MyTimeLine extends TimelineItemModel {
-  cardSub?: string | ReactNode;
+  cardSub?: ReactNode;
 }
 const timelineData: MyTimeLine[] = [
   {
