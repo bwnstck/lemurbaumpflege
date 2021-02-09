@@ -14,7 +14,7 @@ const Skillz: FunctionComponent = () => {
       <h1>Leistungen</h1>
       <Card>
         <h3>
-          <div></div>
+          <div />
           <BeforeTree>
             <TreeImg src={Tree} alt="Baum" />
           </BeforeTree>
@@ -28,7 +28,7 @@ const Skillz: FunctionComponent = () => {
           </li>
           <li>
             <h4>TOTHOLZ-ENTFERNUNG </h4>
-            Um die Verkehrssicherheit herzustellen werden Tote und abgerissene
+            Um die Verkehrssicherheit herzustellen werden tote und abgerissene
             Äste entfernt.
           </li>
           <li>
@@ -52,7 +52,7 @@ const Skillz: FunctionComponent = () => {
       <CardWrapper>
         <Card>
           <h3>
-            <div></div>
+            <div />
             <MagnifierGlass src={Magnifier} alt="Klettern" />
             Baumkontrolle
           </h3>
@@ -67,7 +67,7 @@ const Skillz: FunctionComponent = () => {
         </Card>
         <Card>
           <h3>
-            <div></div>
+            <div />
             <BeforeGrow>
               <img src={TreeLove} alt="Tulpe" />
             </BeforeGrow>
@@ -85,7 +85,7 @@ const Skillz: FunctionComponent = () => {
         </Card>
         <Card>
           <h3>
-            <div></div>
+            <div />
             <ChainsawImg src={Chainsaw} alt="Kettensäge" />
             Fällarbeiten
           </h3>
@@ -101,7 +101,7 @@ const Skillz: FunctionComponent = () => {
         </Card>
         <Card>
           <h3>
-            <div></div>
+            <div />
             <CertificateImg src={Certificate} alt="Kettensäge" />
             Gutachten
           </h3>
@@ -134,19 +134,18 @@ const BeforeTree = styled.div`
   transition: var(--transition);
   position: relative;
   :hover {
-    &::before {
+    ::before {
       content: url(${Tree});
       height: 35px;
       width: 35px;
       position: absolute;
     }
-    &::after {
+    ::after {
       content: url(${Tree});
       height: 30px;
       width: 30px;
       position: absolute;
       right: 0;
-      z-index: 4;
     }
   }
 `;
