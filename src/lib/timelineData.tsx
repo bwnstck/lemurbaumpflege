@@ -124,12 +124,6 @@ const timelineData: TimelineItemModel[] = [
     cardDetailedText: `Sachkundenachweis für Pflanzenschutzmittel wird benötigt um
             Pflanzenschutzmittel ausbringen zu dürfen`,
   },
-  {
-    title: "??????",
-    cardTitle: "Weiterbildung",
-    cardSubtitle: `Sicherung von Arbeitsstellen an Straßen`,
-    // cardDetailedText: ``,
-  },
 ];
 
 export default timelineData;

@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState } from "react";
 import styled from "styled-components/macro";
 // import ChristophClimbing from "../assets/christoph_climbing.jpg";
-import Christoph from "../assets/profilePicBoss.jpg";
+import Christoph from "../assets/chrisOnTree.jpg";
 import StyledSection from "../components/StyledSection";
 
 const AboutMe: FunctionComponent = () => {
@@ -170,10 +170,10 @@ const AboutMe: FunctionComponent = () => {
 };
 const BioLength = styled.div`
   max-width: 350px;
-  margin: auto auto 1rem;
+  margin: auto;
   background-color: var(--text-primary);
-  padding: 0.5em 1.5em;
-  border-radius: 5px;
+  padding: 0.75em 1.5em;
+  border-radius: 5px 5px 0 0;
   h2 {
     margin: 0.5rem auto;
   }
