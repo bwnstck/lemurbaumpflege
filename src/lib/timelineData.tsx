@@ -3,8 +3,12 @@ import Cyprus from "../assets/timeline/zypern.jpg";
 import Chainsaw from "../assets/timeline/chainsaw.jpg";
 import PSA from "../assets/timeline/psa.jpg";
 import FAW from "../assets/timeline/faw.jpg";
+import { ReactNode } from "react";
 
-const timelineData: TimelineItemModel[] = [
+interface MyTimeLine extends TimelineItemModel {
+  cardSub?: string | ReactNode;
+}
+const timelineData: MyTimeLine[] = [
   {
     title: "Januar 2020",
     cardTitle: "Mitgliedschaft",
@@ -29,7 +33,7 @@ const timelineData: TimelineItemModel[] = [
   {
     title: "Januar 2017",
     cardTitle: "FAW",
-    cardSubtitle: (
+    cardSub: (
       <>
         <p>Fachagrarwirt für Baumpflege und Baumsanierung</p>
         <img width="100%" height="100%" src={FAW} alt="FAW" />
@@ -59,7 +63,7 @@ const timelineData: TimelineItemModel[] = [
   {
     title: "August 2015",
     cardTitle: "Weiterbildung",
-    cardSubtitle: (
+    cardSub: (
       <>
         <p>Forestfire Protection Management in Cyprus </p>
         <img width="100%" height="100%" src={Cyprus} alt="Zypern" />
@@ -69,7 +73,7 @@ const timelineData: TimelineItemModel[] = [
   {
     title: "Dezember 2014",
     cardTitle: "Schulung",
-    cardSubtitle: (
+    cardSub: (
       <>
         <p>Sachkundiger für PSA </p>
         <img width="100%" height="100%" src={PSA} alt="PSA" />
@@ -80,7 +84,7 @@ const timelineData: TimelineItemModel[] = [
   {
     title: "Juli 2014",
     cardTitle: "Zertifizierung",
-    cardSubtitle: (
+    cardSub: (
       <>
         <p>SKT A</p>
         <img width="100%" height="100%" src={Chainsaw} alt="Kettensäge" />

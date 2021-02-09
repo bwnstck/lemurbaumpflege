@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect, useState } from "react";
+import React, { FunctionComponent, useState } from "react";
 import styled from "styled-components/macro";
 import Lemur from "../assets/logo.png";
 import StyledLink from "./StyledLink";
@@ -41,7 +41,11 @@ const Navbar: FunctionComponent = () => {
       {mobile && (
         <>
           <button onClick={() => setOpen(!open)}>Click</button>
-          {/* <li>
+        </>
+      )}
+      <Sidebar open={open}>
+        <ul onClick={() => setOpen(!open)}>
+          <li>
             <StyledLink to="/aboutMe">Über mich</StyledLink>
           </li>
           <li>
@@ -55,10 +59,9 @@ const Navbar: FunctionComponent = () => {
           </li>
           <li>
             <StyledLink to="/kontakt">Kontakt</StyledLink>
-          </li> */}
-        </>
-      )}
-      <Sidebar open={open} />
+          </li>
+        </ul>
+      </Sidebar>
     </NavContainer>
   );
 };
@@ -66,13 +69,22 @@ const Sidebar = styled.div<{
   open: boolean;
   // onClick: VoidFunction;
 }>`
+  transition: right 0.5s ease-in-out;
   position: absolute;
-  right: ${(props) => (props.open ? "0" : "-200px")};
-  top: 70px;
+  right: ${(props) => (props.open ? "0" : "-100%")};
+  top: var(--nav-height);
   height: 100vh;
-  width: 200px;
-  background: red;
-  z-index: 1;
+  width: 100%;
+  background: var(--text-primary);
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    li {
+      margin: 1rem;
+    }
+  }
 `;
 
 const NavContainer = styled.nav`
