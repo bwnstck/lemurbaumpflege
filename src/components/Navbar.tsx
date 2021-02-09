@@ -1,34 +1,80 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useEffect, useState } from "react";
 import styled from "styled-components/macro";
 import Lemur from "../assets/logo.png";
 import StyledLink from "./StyledLink";
+import { isMobile } from "../lib/responsiveHelpers";
 
 const Navbar: FunctionComponent = () => {
+  const [mobile, setMobile] = useState(isMobile());
+  const [open, setOpen] = useState(false);
+
+  console.log(open);
+
+  window.addEventListener("resize", () =>
+    isMobile() ? setMobile(true) : setMobile(false)
+  );
+
   return (
     <NavContainer>
       <StyledLink to="/">
         <img src={Lemur} alt="Lemur" />
       </StyledLink>
-      <ul className="NavBar">
-        <li>
-          <StyledLink to="/aboutMe">Über mich</StyledLink>
-        </li>
-        <li>
-          <StyledLink to="/skillz">Leistungen</StyledLink>
-        </li>
-        <li>
-          <StyledLink to="/qualifikationen">Qualifikationen</StyledLink>
-        </li>
-        <li>
-          <StyledLink to="/transparenz">Transparenz</StyledLink>
-        </li>
-        <li>
-          <StyledLink to="/kontakt">Kontakt</StyledLink>
-        </li>
-      </ul>
+      {!mobile && (
+        <ul className="NavBar">
+          <li>
+            <StyledLink to="/aboutMe">Über mich</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/skillz">Leistungen</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/qualifikationen">Qualifikationen</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/transparenz">Transparenz</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/kontakt">Kontakt</StyledLink>
+          </li>
+        </ul>
+      )}
+      {mobile && (
+        <>
+          <button onClick={() => setOpen(!open)}>Click</button>
+          {/* <li>
+            <StyledLink to="/aboutMe">Über mich</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/skillz">Leistungen</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/qualifikationen">Qualifikationen</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/transparenz">Transparenz</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/kontakt">Kontakt</StyledLink>
+          </li> */}
+        </>
+      )}
+      <Sidebar open={open} />
     </NavContainer>
   );
 };
+const Sidebar = styled.div<{
+  open: boolean;
+  // onClick: VoidFunction;
+}>`
+  position: absolute;
+  right: ${(props) => (props.open ? "0" : "-200px")};
+  top: 70px;
+  height: 100vh;
+  width: 200px;
+  background: red;
+  z-index: 1;
+`;
+
 const NavContainer = styled.nav`
   position: fixed;
   z-index: 100;
