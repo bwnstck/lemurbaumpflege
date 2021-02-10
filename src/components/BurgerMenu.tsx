@@ -2,11 +2,9 @@ import styled from "styled-components/macro";
 
 interface IBurger {
   open?: boolean;
-  onClick: React.MouseEventHandler<HTMLElement>;
+  onClick?: React.MouseEventHandler<HTMLElement>;
 }
-interface IBurger2 {
-  open?: boolean;
-}
+
 const BurgerMenu = ({ open, onClick }: IBurger): JSX.Element => {
   // const BurgerMenu:FC<IBurger> = ({ open }) => {
   return (
@@ -18,7 +16,7 @@ const BurgerMenu = ({ open, onClick }: IBurger): JSX.Element => {
   );
 };
 
-const Burger = styled.div<IBurger2>`
+const Burger = styled.div<IBurger>`
   width: 40px;
   height: 40px;
   display: flex;

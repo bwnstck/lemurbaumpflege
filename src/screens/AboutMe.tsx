@@ -10,7 +10,12 @@ const AboutMe: FunctionComponent = () => {
   return (
     <AboutMeWrapper>
       <h1>Über mich:</h1>
-      <img src={Christoph} alt="Christoph as a Gangmember" />
+      <img
+        src={Christoph}
+        width="320px"
+        height="320px"
+        alt="Christoph as a Gangmember"
+      />
       <BioLength>
         <h2>Textlänge</h2>
         <div>
@@ -193,10 +198,11 @@ const BioLength = styled.div`
     height: 2px;
   }
 `;
-const RadioButton = styled.div<{
+interface IRadio {
   checked: boolean;
   onClick: VoidFunction;
-}>`
+}
+const RadioButton = styled.div<IRadio>`
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -222,10 +228,11 @@ const RadioButton = styled.div<{
 const AboutMeWrapper = styled(StyledSection)`
   text-align: center;
   img {
-    width: 50%;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     margin: 1rem auto;
-    max-width: 350px;
+    max-width: 320px;
   }
   div:nth-of-type(2) {
   }

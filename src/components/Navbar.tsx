@@ -42,19 +42,21 @@ const Navbar: FunctionComponent = () => {
         </ul>
       )}
       {mobile && <BurgerMenu open={open} onClick={() => setOpen(!open)} />}
-      <Sidebar open={open}>
-        <ul onClick={() => setOpen(!open)}>
-          {navItems.map((item) => (
-            <ListElement
-              key={item.link}
-              active={isActive === item.link}
-              onClick={() => setIsActive(item.link)}
-            >
-              <Link to={`/${item.link}`}>{item.name}</Link>
-            </ListElement>
-          ))}
-        </ul>
-      </Sidebar>
+      {mobile && (
+        <Sidebar open={open}>
+          <ul onClick={() => setOpen(!open)}>
+            {navItems.map((item) => (
+              <ListElement
+                key={item.link}
+                active={isActive === item.link}
+                onClick={() => setIsActive(item.link)}
+              >
+                <Link to={`/${item.link}`}>{item.name}</Link>
+              </ListElement>
+            ))}
+          </ul>
+        </Sidebar>
+      )}
     </NavContainer>
   );
 };
@@ -113,7 +115,7 @@ const Sidebar = styled.div<ISidebar>`
   position: absolute;
   right: ${(props) => (props.open ? "0" : "-100%")};
   top: var(--nav-height);
-  height: 100vh;
+  height: calc(100vh - var(--nav-height));
   width: 100%;
   background: var(--text-primary);
   ul {
