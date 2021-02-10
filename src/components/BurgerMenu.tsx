@@ -2,12 +2,15 @@ import styled from "styled-components/macro";
 
 interface IBurger {
   open?: boolean;
-  onClick?: () => void;
+  onClick: React.MouseEventHandler<HTMLElement>;
 }
-const BurgerMenu = ({ open }: IBurger): JSX.Element => {
+interface IBurger2 {
+  open?: boolean;
+}
+const BurgerMenu = ({ open, onClick }: IBurger): JSX.Element => {
   // const BurgerMenu:FC<IBurger> = ({ open }) => {
   return (
-    <Burger open={open}>
+    <Burger open={open} onClick={onClick}>
       <span />
       <span />
       <span />
@@ -15,7 +18,7 @@ const BurgerMenu = ({ open }: IBurger): JSX.Element => {
   );
 };
 
-const Burger = styled.div<IBurger>`
+const Burger = styled.div<IBurger2>`
   width: 40px;
   height: 40px;
   display: flex;
@@ -35,7 +38,7 @@ const Burger = styled.div<IBurger>`
     left: 0;
     background: var(--eton-blue);
     transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
-    /* transform-origin: top left; */
+    transform-origin: top left;
   }
   > :nth-child(2) {
     top: 20px;

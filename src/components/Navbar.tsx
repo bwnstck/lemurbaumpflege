@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState } from "react";
 import styled from "styled-components/macro";
 import Lemur from "../assets/logo.png";
-import StyledLink from "./StyledLink";
+import Link from "./StyledLink";
 import { isMobile } from "../lib/responsiveHelpers";
 import BurgerMenu from "./BurgerMenu";
 
@@ -23,12 +23,11 @@ const Navbar: FunctionComponent = () => {
     { name: "Transparenz", link: "transparenz" },
     { name: "Kontakt", link: "kontakt" },
   ];
-
   return (
     <NavContainer>
-      <StyledLink to="/">
+      <Link to="/">
         <img src={Lemur} alt="Lemur" onClick={() => setIsActive("")} />
-      </StyledLink>
+      </Link>
       {!mobile && (
         <ul className="NavBar">
           {navItems.map((item) => (
@@ -37,7 +36,7 @@ const Navbar: FunctionComponent = () => {
               active={isActive === item.link}
               onClick={() => setIsActive(item.link)}
             >
-              <StyledLink to={`/${item.link}`}>{item.name}</StyledLink>
+              <Link to={`/${item.link}`}>{item.name}</Link>
             </ListElement>
           ))}
         </ul>
@@ -51,7 +50,7 @@ const Navbar: FunctionComponent = () => {
               active={isActive === item.link}
               onClick={() => setIsActive(item.link)}
             >
-              <StyledLink to={`/${item.link}`}>{item.name}</StyledLink>
+              <Link to={`/${item.link}`}>{item.name}</Link>
             </ListElement>
           ))}
         </ul>
