@@ -3,6 +3,7 @@ import styled from "styled-components/macro";
 import Lemur from "../assets/logo.png";
 import StyledLink from "./StyledLink";
 import { isMobile } from "../lib/responsiveHelpers";
+import BurgerMenu from "./BurgerMenu";
 
 const Navbar: FunctionComponent = () => {
   const [mobile, setMobile] = useState(isMobile());
@@ -41,15 +42,7 @@ const Navbar: FunctionComponent = () => {
           ))}
         </ul>
       )}
-      {mobile && (
-        <>
-          <Burger open={open} onClick={() => setOpen(!open)}>
-            <span />
-            <span />
-            <span />
-          </Burger>
-        </>
-      )}
+      {mobile && <BurgerMenu open={open} onClick={() => setOpen(!open)} />}
       <Sidebar open={open}>
         <ul onClick={() => setOpen(!open)}>
           {navItems.map((item) => (
@@ -96,10 +89,12 @@ const NavContainer = styled.nav`
     }
   }
 `;
-const ListElement = styled.li<{
+interface IList {
   active: boolean;
   onClick: () => void;
-}>`
+}
+
+const ListElement = styled.li<IList>`
   a {
     transition: var(--transition);
     text-decoration-color: transparent;
@@ -111,11 +106,11 @@ const ListElement = styled.li<{
     }
   }
 `;
-
-const Sidebar = styled.div<{
+interface ISidebar {
   open: boolean;
-}>`
-  transition: right 0.5s ease-in-out;
+}
+const Sidebar = styled.div<ISidebar>`
+  transition: right 0.3s ease-in-out;
   position: absolute;
   right: ${(props) => (props.open ? "0" : "-100%")};
   top: var(--nav-height);
@@ -130,45 +125,6 @@ const Sidebar = styled.div<{
     li {
       margin: 1rem;
     }
-  }
-`;
-
-const Burger = styled.div<{
-  open?: boolean;
-}>`
-  width: 40px;
-  height: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  position: relative;
-  > * {
-    position: absolute;
-    background: black;
-    height: 4px;
-    border-radius: 5px;
-    width: 100%;
-    transition: transform 0.5s ease-in-out, background 0.5s ease-in-out;
-  }
-  > :nth-child(1) {
-    top: 10px;
-    left: 0;
-    background: var(--eton-blue);
-    transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
-    transform-origin: top left;
-  }
-  > :nth-child(2) {
-    top: 20px;
-    left: 0;
-    background: ${({ open }) =>
-      open ? "transparent" : "var(--russian-green)"};
-  }
-  > :nth-child(3) {
-    top: 30px;
-    left: 0;
-    background: var(--text-dark);
-    transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
-    transform-origin: top left;
   }
 `;
 
