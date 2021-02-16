@@ -29,14 +29,14 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
   #root {
-    height: 100vh;
-    background: linear-gradient(
+    height: 100%;
+    min-height: 100vh;
+    /* background: linear-gradient(
           rgba(255, 255, 255, 0.2),
-          /* var(--bg-overlay2) */
           var(--bg-overlay)
         ), url(${ForestBackground});
     background-size: cover;
-    background-position: center;
+    background-position: center; */
   }
 
   body {

@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import styled from "styled-components/macro";
-import StyledLink from "./StyledLink";
+import StyledLink from "./Link";
 
 const Footer: FunctionComponent = () => {
   return (

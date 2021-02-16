@@ -15,7 +15,7 @@ const Qualifications: FunctionComponent = () => {
 };
 
 const QualificationWrapper = styled(StyledSection)`
-  min-height: 75vh;
+  /* min-height: 75vh;
   position: relative;
   > div {
     position: absolute;
@@ -23,7 +23,7 @@ const QualificationWrapper = styled(StyledSection)`
     right: 0;
     height: 100%;
     width: auto;
-  }
+  } */
 `;
 
 export default Qualifications;

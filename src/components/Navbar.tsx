@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState } from "react";
 import styled from "styled-components/macro";
 import Lemur from "../assets/logo.png";
-import Link from "./StyledLink";
+import Link from "./Link";
 import { isMobile } from "../lib/responsiveHelpers";
 import BurgerMenu from "./BurgerMenu";
 
