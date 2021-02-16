@@ -6,6 +6,7 @@ import FAW from "../assets/timeline/faw.jpg";
 import Cyprus from "../assets/timeline/zypern.jpg";
 import PSA from "../assets/timeline/psa.jpg";
 import Chainsaw from "../assets/timeline/chainsaw.jpg";
+import { isMobile } from "../lib/responsiveHelpers";
 
 const Timeline: FC = () => {
   return (
@@ -26,20 +27,16 @@ const Timeline: FC = () => {
       <div />
       <div />
       <div />
-      <div>
-        <img src={FAW} height="250px" />
-      </div>
+      <div>{!isMobile() && <img src={FAW} height="250px" width="auto" />}</div>
       <div />
       <div />
       <div />
       <div>
-        <img src={Cyprus} height="250px" />
+        {!isMobile() && <img src={Cyprus} height="250px" width="auto" />}
       </div>
+      <div>{!isMobile() && <img src={PSA} height="250px" width="auto" />}</div>
       <div>
-        <img src={PSA} height="250px" />
-      </div>
-      <div>
-        <img src={Chainsaw} height="300px" />
+        {!isMobile() && <img src={Chainsaw} height="250px" width="auto" />}
       </div>
       <div className="chrono-icons">
         <img src={Tree} alt="image1" />
