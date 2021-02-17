@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from "react";
 import styled from "styled-components/macro";
 import { Parallax } from "react-parallax";
-import Forest from "../assets/forestbackground.svg";
+import Forest from "../assets/forestbackground.jpg";
 
 interface WrapperProps {
   children: ReactNode;
@@ -10,7 +10,7 @@ interface WrapperProps {
 const Wrapper: FC<WrapperProps> = ({ children }) => {
   return (
     <Parallax
-      // blur={{ min: -15, max: 15 }}
+      blur={{ min: -100, max: 100 }}
       bgImage={Forest}
       bgImageAlt="Forest"
       strength={-300}
@@ -21,10 +21,14 @@ const Wrapper: FC<WrapperProps> = ({ children }) => {
 };
 
 const WrapperContainer = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100%;
+  max-width: 1200px;
   margin: auto;
-  padding: 1rem clamp(0.1rem, 2vw, 1rem);
+  padding: 1rem clamp(1rem, 800px, 10rem);
   overflow: auto;
+  ::-webkit-scrollbar {
+    background: transparent;
+  }
 `;
 export default Wrapper;

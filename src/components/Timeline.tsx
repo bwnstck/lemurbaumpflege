@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Chrono } from "react-chrono";
 import timelineData from "../lib/timelineData";
-import Tree from "../assets/flaticons/tree-1.svg";
+import Lemur from "../assets/logo.png";
 import FAW from "../assets/timeline/faw.jpg";
 import Cyprus from "../assets/timeline/zypern.jpg";
 import PSA from "../assets/timeline/psa.jpg";
@@ -25,20 +25,21 @@ const Timeline: FC = () => {
     >
       <div />
       <div />
+      <div>
+        {!isMobile() && <img src={Chainsaw} height="200px" width="auto" />}
+      </div>
       <div />
-      <div />
-      <div>{!isMobile() && <img src={FAW} height="250px" width="auto" />}</div>
-      <div />
+      <div>{!isMobile() && <img src={FAW} height="200px" width="auto" />}</div>
+      <div>
+        {!isMobile() && <img src={Lemur} height="200px" width="auto" />}
+      </div>
       <div />
       <div />
       <div>
-        {!isMobile() && <img src={Cyprus} height="250px" width="auto" />}
+        {!isMobile() && <img src={Cyprus} height="200px" width="auto" />}
       </div>
-      <div>{!isMobile() && <img src={PSA} height="250px" width="auto" />}</div>
-      <div>
-        {!isMobile() && <img src={Chainsaw} height="250px" width="auto" />}
-      </div>
-      <div className="chrono-icons">
+      <div>{!isMobile() && <img src={PSA} height="200px" width="auto" />}</div>
+      {/* <div className="chrono-icons">
         <img src={Tree} alt="image1" />
         <img src={Tree} alt="image1" />
         <img src={Tree} alt="image1" />
@@ -54,8 +55,8 @@ const Timeline: FC = () => {
         <img src={Tree} alt="image1" />
         <img src={Tree} alt="image1" />
         <img src={Tree} alt="image1" />
-        <img src={Tree} alt="image1" />
-      </div>
+        <img src={Tree} alt="image1" /0
+      </div> */}
     </Chrono>
   );
 };

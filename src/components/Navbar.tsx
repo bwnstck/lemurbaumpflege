@@ -28,8 +28,8 @@ const Navbar: FunctionComponent = () => {
       <Link to="/">
         <img src={Lemur} alt="Lemur" onClick={() => setIsActive("")} />
       </Link>
-      {!mobile && (
-        <ul className="NavBar">
+      {!mobile && !open && (
+        <ul>
           {navItems.map((item) => (
             <ListElement
               key={item.link}
@@ -41,8 +41,8 @@ const Navbar: FunctionComponent = () => {
           ))}
         </ul>
       )}
-      {mobile && <BurgerMenu open={open} onClick={() => setOpen(!open)} />}
-      {mobile && (
+      {<BurgerMenu open={open} onClick={() => setOpen(!open)} />}
+      {
         <Sidebar open={open}>
           <ul onClick={() => setOpen(!open)}>
             {navItems.map((item) => (
@@ -56,7 +56,7 @@ const Navbar: FunctionComponent = () => {
             ))}
           </ul>
         </Sidebar>
-      )}
+      }
     </NavContainer>
   );
 };
@@ -82,8 +82,6 @@ const NavContainer = styled.nav`
     display: flex;
     list-style-type: none;
     margin-right: 2rem;
-    li > {
-    }
 
     *:not(:first-child) {
       margin-left: 1rem;
@@ -99,6 +97,7 @@ const ListElement = styled.li<IList>`
   a {
     transition: var(--transition);
     text-decoration-color: transparent;
+    font-size: 1.5rem;
     ${(props) =>
       props.active &&
       "text-decoration: underline solid var(--paradise-pink) 2px;"}
