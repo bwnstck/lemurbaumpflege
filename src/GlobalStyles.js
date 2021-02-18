@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components/macro";
-import ForestBackground from "./assets/forestbackground.jpg";
 const GlobalStyle = createGlobalStyle`
   :root {
     /* CSS HSL */
@@ -19,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     --text-dark: var(--rich-black-forest);
     --nav-height: 75px;
     --transition: all 0.3s ease-in-out;
+    --letterSpacing: 3px;
   }
 
   *,
@@ -39,20 +39,17 @@ const GlobalStyle = createGlobalStyle`
   }
   h1,
   h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h3 {
     font-weight: 700;
-    letter-spacing: 0.2rem;
+    letter-spacing: var(--letterSpacing);
     margin: 1.5rem auto 1rem;
   }
   h1{
     font-size: 2rem;
   }
-
+li{line-height: 2;}
   p {
-    line-height: 2;
+   line-height: 2;
     max-width: 70ch;
     margin: auto;
   }

@@ -84,7 +84,16 @@ const NavContainer = styled.nav`
     margin-right: 2rem;
 
     *:not(:first-child) {
-      margin-left: 1rem;
+      position: relative;
+      margin-left: 1.4rem;
+      ::before {
+        content: "•";
+        position: absolute;
+        left: -1rem;
+        top: -10px;
+        color: var(--paradise-pink);
+        font-size: 2rem;
+      }
     }
   }
 `;
@@ -97,12 +106,13 @@ const ListElement = styled.li<IList>`
   a {
     transition: var(--transition);
     text-decoration-color: transparent;
-    font-size: 1.5rem;
-    ${(props) =>
-      props.active &&
-      "text-decoration: underline solid var(--paradise-pink) 2px;"}
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: calc(var(--letterSpacing) - 0.1rem);
+    border-bottom: ${(props) => (props.active ? "2px" : "0px")} solid
+      var(--paradise-pink);
     :hover {
-      text-decoration: underline solid var(--paradise-pink) 2px;
+      border-bottom: 2px solid var(--paradise-pink);
     }
   }
 `;
@@ -116,14 +126,22 @@ const Sidebar = styled.div<ISidebar>`
   top: var(--nav-height);
   height: calc(100vh - var(--nav-height));
   width: 100%;
-  background: var(--text-primary);
+  background: var(--text-dark);
+
   ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 2rem;
+    *:not(:first-child)::before {
+      display: none;
+    }
     li {
       margin: 1rem;
+      a {
+        color: var(--text-primary);
+        font-size: 1.5rem;
+      }
     }
   }
 `;

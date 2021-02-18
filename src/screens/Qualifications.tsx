@@ -1,13 +1,13 @@
 import React, { FunctionComponent } from "react";
-import StyledSection from "../components/StyledSection";
+import Section from "../components/Section";
 import Timeline from "../components/Timeline";
 
 const Qualifications: FunctionComponent = () => {
   return (
-    <StyledSection>
-      <h2>Qualifikationen</h2>
+    <Section transparent>
+      <h1>Qualifikationen</h1>
       <Timeline />
-    </StyledSection>
+    </Section>
   );
 };
 

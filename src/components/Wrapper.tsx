@@ -10,10 +10,10 @@ interface WrapperProps {
 const Wrapper: FC<WrapperProps> = ({ children }) => {
   return (
     <Parallax
-      blur={{ min: -100, max: 100 }}
+      blur={{ min: -30, max: 30 }}
       bgImage={Forest}
       bgImageAlt="Forest"
-      strength={-300}
+      strength={-200}
     >
       <WrapperContainer>{children}</WrapperContainer>;
     </Parallax>
@@ -22,10 +22,8 @@ const Wrapper: FC<WrapperProps> = ({ children }) => {
 
 const WrapperContainer = styled.div`
   height: 100vh;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 1rem clamp(1rem, 800px, 10rem);
+  margin-top: var(--nav-height);
+  padding: 0 1rem;
   overflow: auto;
   ::-webkit-scrollbar {
     background: transparent;

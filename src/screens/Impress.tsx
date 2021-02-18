@@ -1,10 +1,10 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-import StyledSection from "../components/StyledSection";
+import Section from "../components/Section";
 
 const Impress: FC = () => {
   return (
-    <ImpressWrapper bright>
+    <ImpressWrapper>
       <h1>Impressum</h1>
       <h5>Domaininhaber und verantwortlich für den Inhalt: </h5>
       <p>Lemur Baumpflege Christoph Mössinger</p>
@@ -89,7 +89,7 @@ const Impress: FC = () => {
     </ImpressWrapper>
   );
 };
-const ImpressWrapper = styled(StyledSection)`
+const ImpressWrapper = styled(Section)`
   h5 {
     text-align: center;
   }

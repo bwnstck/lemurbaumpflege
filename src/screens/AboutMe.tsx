@@ -1,8 +1,8 @@
 import React, { FunctionComponent, useState } from "react";
 import styled from "styled-components/macro";
-// import ChristophClimbing from "../assets/christoph_climbing.jpg";
 import Christoph from "../assets/chrisOnTree.jpg";
-import StyledSection from "../components/StyledSection";
+import Section from "../components/Section";
+import PageWrapper from "../components/PageWrapper";
 
 const AboutMe: FunctionComponent = () => {
   const [textLength, setTextLength] = useState("s");
@@ -16,28 +16,28 @@ const AboutMe: FunctionComponent = () => {
         height="320px"
         alt="Christoph as a Gangmember"
       />
-      <BioLength>
-        <h2>Textlänge</h2>
-        <div>
-          <span>kurz</span>
-          <RadioButton
-            checked={textLength === "s"}
-            onClick={() => setTextLength("s")}
-          />
-          <hr />
-          <RadioButton
-            checked={textLength === "m"}
-            onClick={() => setTextLength("m")}
-          />
-          <hr />
-          <RadioButton
-            checked={textLength === "l"}
-            onClick={() => setTextLength("l")}
-          />
-          <span>lang</span>
-        </div>
-      </BioLength>
-      <TextBox>
+      <Section>
+        <BioLength>
+          <h2>Textlänge</h2>
+          <div>
+            <span>kurz</span>
+            <RadioButton
+              checked={textLength === "s"}
+              onClick={() => setTextLength("s")}
+            />
+            <hr />
+            <RadioButton
+              checked={textLength === "m"}
+              onClick={() => setTextLength("m")}
+            />
+            <hr />
+            <RadioButton
+              checked={textLength === "l"}
+              onClick={() => setTextLength("l")}
+            />
+            <span>lang</span>
+          </div>
+        </BioLength>
         {textLength === "s" ? (
           <>
             <p>
@@ -163,22 +163,36 @@ const AboutMe: FunctionComponent = () => {
         )}
 
         <p>
-          Sie haben noch Fragen?
-          <br />
-          Setzen Sie sich doch gerne mit mir{" "}
+          Sie haben noch Fragen? Setzen Sie sich doch gerne mit mir{" "}
           <a href="mailto:info@lemurbaumpflege.de">in Verbindung.</a>
         </p>
-        <span>Ihr Christoph Mössinger</span>
-      </TextBox>
+        <p>Ihr Christoph Mössinger</p>
+      </Section>
     </AboutMeWrapper>
   );
 };
+const AboutMeWrapper = styled(PageWrapper)`
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin: 1rem auto;
+    max-width: 320px;
+    display: block;
+    text-align: center;
+  }
+  p {
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+`;
 const BioLength = styled.div`
   max-width: 350px;
   margin: auto;
   background-color: var(--text-primary);
   padding: 0.75em 1.5em;
   border-radius: 5px 5px 0 0;
+  text-align: center;
   h2 {
     margin: 0.5rem auto;
   }
@@ -225,26 +239,5 @@ const RadioButton = styled.div<IRadio>`
     );
   }
 `;
-const AboutMeWrapper = styled(StyledSection)`
-  text-align: center;
-  img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    margin: 1rem auto;
-    max-width: 320px;
-  }
-  div:nth-of-type(2) {
-  }
-  p {
-    margin-bottom: 2rem;
-    text-align: left;
-  }
-`;
 
-const TextBox = styled.div`
-  background-color: var(--text-primary);
-  padding: 1rem;
-  border-radius: 5px;
-`;
 export default AboutMe;

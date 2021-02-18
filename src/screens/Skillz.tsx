@@ -6,11 +6,11 @@ import Chainsaw from "../assets/flaticons/chainsaw.svg";
 import Magnifier from "../assets/flaticons/search.svg";
 import TreeLove from "../assets/flaticons/love.svg";
 import Certificate from "../assets/flaticons/certificate.svg";
-import StyledSection from "../components/StyledSection";
+import Section from "../components/Section";
 
 const Skillz: FunctionComponent = () => {
   return (
-    <StyledSection>
+    <Section transparent>
       <h1>Leistungen</h1>
       <Card>
         <h3>
@@ -113,12 +113,12 @@ const Skillz: FunctionComponent = () => {
               Kontrolle und Erfassung der Baumbewohner kann in einem{" "}
               <b> Artenschutz</b> Gutachten erfasst werden. Auch Beringungen von
               Vögeln oder ähnliche Projekte werden durch das Baumklettern gerne
-              unterstützt
+              unterstützt.
             </li>
           </ul>
         </Card>
       </CardWrapper>
-    </StyledSection>
+    </Section>
   );
 };
 const CardWrapper = styled.div`
@@ -164,7 +164,6 @@ const CertificateImg = styled.img`
     transform: rotate(1turn);
   }
 `;
-
 const MagnifierGlass = styled.img`
   :hover {
     transform: scale(1.2);
