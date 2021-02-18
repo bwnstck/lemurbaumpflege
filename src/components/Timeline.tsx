@@ -19,9 +19,8 @@ const Timeline: FC = () => {
         cardForeColor: "var(--text-dark)",
       }}
       mode="VERTICAL_ALTERNATING"
-      // slideShow
+      hideControls={true}
       slideItemDuration={4000}
-      scrollable={{ scrollbar: true }}
     >
       <div />
       <div />

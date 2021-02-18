@@ -24,9 +24,9 @@ const WrapperContainer = styled.div`
   height: 100vh;
   margin-top: var(--nav-height);
   padding: 0 1rem;
-  overflow: auto;
-  ::-webkit-scrollbar {
+  overflow-y: auto;
+  /* ::-webkit-scrollbar {
     background: transparent;
-  }
+  } */
 `;
 export default Wrapper;
