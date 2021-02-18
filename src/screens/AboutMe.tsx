@@ -176,6 +176,7 @@ const AboutMeWrapper = styled(PageWrapper)`
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    border: 4px solid var(--paradise-pink);
     margin: 1rem auto;
     max-width: 320px;
     display: block;

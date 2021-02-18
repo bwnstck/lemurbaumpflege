@@ -10,8 +10,8 @@ const Card: FunctionComponent<CardProps> = ({ children }) => {
 const CardWrapper = styled.div`
   position: relative;
   padding: 2rem 1rem 1rem;
-  margin: 1rem;
   border: 2px solid var(--text-dark);
+  margin: 1rem auto;
   border-radius: 5px;
   background: var(--text-primary);
   h3 {
