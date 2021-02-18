@@ -21,7 +21,7 @@ const Timeline: FC = () => {
       mode="VERTICAL_ALTERNATING"
       // slideShow
       slideItemDuration={4000}
-      scrollable={{ scrollbar: false }}
+      scrollable={{ scrollbar: true }}
     >
       <div />
       <div />
