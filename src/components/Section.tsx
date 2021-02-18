@@ -2,7 +2,7 @@ import styled from "styled-components/macro";
 
 const Section = styled.section<{ transparent?: boolean }>`
   max-width: 100ch;
-  padding: 1.5rem 1rem 3rem;
+  padding: 1rem 1.5rem;
   margin: 1rem auto;
 
   background-color: ${(props) =>
