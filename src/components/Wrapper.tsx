@@ -14,7 +14,7 @@ const Wrapper: FC<WrapperProps> = ({ children }) => {
 
   return (
     <Parallax
-      blur={{ min: -30, max: 30 }}
+      blur={{ min: -28, max: 30 }}
       bgImage={src}
       bgImageAlt="Forest"
       strength={-200}

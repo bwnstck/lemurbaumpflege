@@ -8,6 +8,7 @@ import TreeLove from "../assets/flaticons/love.svg";
 import Certificate from "../assets/flaticons/certificate.svg";
 import Section from "../components/Section";
 import PageWrapper from "../components/PageWrapper";
+import RotateOnHoverImg from "../components/RotateOnHoverImg";
 
 const Skillz: FunctionComponent = () => {
   return (
@@ -18,7 +19,7 @@ const Skillz: FunctionComponent = () => {
           <h3>
             <div />
             <BeforeTree>
-              <TreeImg src={Tree} alt="Baum" />
+              <TreeImg src={Tree} alt="Baum" loading="lazy" />
             </BeforeTree>
             Baumpflege
           </h3>
@@ -55,7 +56,7 @@ const Skillz: FunctionComponent = () => {
           <Card>
             <h3>
               <div />
-              <MagnifierGlass src={Magnifier} alt="Klettern" />
+              <MagnifierGlass src={Magnifier} alt="Klettern" loading="lazy" />
               Baumkontrolle
             </h3>
             <ul>
@@ -71,7 +72,7 @@ const Skillz: FunctionComponent = () => {
             <h3>
               <div />
               <BeforeGrow>
-                <img src={TreeLove} alt="Tulpe" />
+                <img src={TreeLove} alt="Wachsender Baum" loading="lazy" />
               </BeforeGrow>
               Pflanzberatung
             </h3>
@@ -88,7 +89,11 @@ const Skillz: FunctionComponent = () => {
           <Card>
             <h3>
               <div />
-              <ChainsawImg src={Chainsaw} alt="Kettensäge" />
+              <RotateOnHoverImg
+                src={Chainsaw}
+                alt="Kettensäge"
+                loading="lazy"
+              />
               Fällarbeiten
             </h3>
             <ul>
@@ -104,7 +109,11 @@ const Skillz: FunctionComponent = () => {
           <Card>
             <h3>
               <div />
-              <CertificateImg src={Certificate} alt="Kettensäge" />
+              <CertificateImg
+                src={Certificate}
+                alt="Zertifikat"
+                loading="lazy"
+              />
               Gutachten
             </h3>
             <ul>
@@ -157,11 +166,7 @@ const TreeImg = styled.img`
   position: relative;
   z-index: 5;
 `;
-const ChainsawImg = styled.img`
-  :hover {
-    transform: rotate(45deg);
-  }
-`;
+
 const CertificateImg = styled.img`
   :hover {
     transform: rotate(1turn);
