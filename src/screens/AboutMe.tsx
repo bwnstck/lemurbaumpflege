@@ -1,20 +1,27 @@
 import React, { FunctionComponent, useState } from "react";
 import styled from "styled-components/macro";
 import Christoph from "../assets/chrisOnTree.jpg";
+import ChristophSmall from "../assets/chrisOnTree_small.jpg";
 import Section from "../components/Section";
 import PageWrapper from "../components/PageWrapper";
+import useProgressiveImg from "../lib/useProgressiveImg";
 
 const AboutMe: FunctionComponent = () => {
   const [textLength, setTextLength] = useState("s");
+  const [src, { blur }] = useProgressiveImg(ChristophSmall, Christoph);
 
   return (
     <AboutMeWrapper>
       <h1>Über mich:</h1>
       <img
-        src={Christoph}
+        src={src}
         width="320px"
         height="320px"
         alt="Christoph as a Gangmember"
+        style={{
+          filter: blur ? "blur(20px)" : "none",
+          transition: blur ? "none" : "filter 0.3s ease-out",
+        }}
       />
       <Section>
         <BioLength>
