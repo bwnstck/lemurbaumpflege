@@ -19,7 +19,7 @@ const Welcome: FunctionComponent = () => {
       <hr />
       <h2>Christoph Mössinger</h2>
       <button onClick={() => history.push("/aboutme")}>
-        <img src={Login} alt="login" />
+        <img src={Login} alt="login" height="50" width="auto" />
       </button>
     </WelcomeContainer>
   );

@@ -26,7 +26,13 @@ const Navbar: FunctionComponent = () => {
   return (
     <NavContainer>
       <Link to="/">
-        <img src={Lemur} alt="Lemur" onClick={() => setIsActive("")} />
+        <img
+          src={Lemur}
+          alt="Lemur"
+          height="50"
+          width="auto"
+          onClick={() => setIsActive("")}
+        />
       </Link>
       {!mobile && !open && (
         <ul>
