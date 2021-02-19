@@ -2,24 +2,19 @@ import React, { FunctionComponent } from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components/macro";
 import Logo from "../assets/logo.png";
-import Login from "../assets/flaticons/login.svg";
+import Chainsaw from "../assets/flaticons/chainsaw.svg";
+import RotateOnHoverImg from "../components/RotateOnHoverImg";
 
 const Welcome: FunctionComponent = () => {
   const history = useHistory();
   return (
     <WelcomeContainer>
-      <img
-        loading="lazy"
-        src={Logo}
-        alt="Lemur-Logo"
-        height="200"
-        width="auto"
-      />
+      <img src={Logo} alt="Lemur-Logo" height="200" width="auto" />
       <h1>Baumpflege</h1>
       <hr />
       <h2>Christoph Mössinger</h2>
       <button onClick={() => history.push("/aboutme")}>
-        <img src={Login} alt="login" height="50" width="auto" />
+        <RotateOnHoverImg src={Chainsaw} alt="login" height="50" width="auto" />
       </button>
     </WelcomeContainer>
   );
@@ -51,18 +46,17 @@ const WelcomeContainer = styled.div`
     text-shadow: 0 0 5px var(--text-dark);
   }
   button {
-    margin: 1rem 4rem;
-    padding: 0.5rem 1rem;
-    font-size: 1.1rem;
-    border: none;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    cursor: pointer;
     background: none;
+    height: 5em;
+    width: auto;
+    border: none;
+
     img {
-      height: 50px;
+      height: 100%;
       transition: var(--transition);
-      :hover {
-        filter: drop-shadow(0 0 1px var(--text-primary));
-        transform: scale(1.1);
-      }
     }
   }
 `;
