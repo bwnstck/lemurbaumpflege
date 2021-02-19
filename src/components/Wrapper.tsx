@@ -20,7 +20,7 @@ const Wrapper: FC<WrapperProps> = ({ children }) => {
       strength={-200}
       style={{
         filter: blur ? "blur(20px)" : "none",
-        transition: blur ? "none" : "filter 0.3s ease-out",
+        // transition: blur ? "none" : "filter 0.3s ease-out",
       }}
     >
       <WrapperContainer>{children}</WrapperContainer>;
