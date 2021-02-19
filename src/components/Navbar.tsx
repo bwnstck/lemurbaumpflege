@@ -97,7 +97,7 @@ const NavContainer = styled.nav`
         position: absolute;
         left: -1rem;
         top: -10px;
-        color: var(--paradise-pink);
+        color: var(--russian-green);
         font-size: 2rem;
       }
     }

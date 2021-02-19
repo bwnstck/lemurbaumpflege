@@ -48,16 +48,12 @@ const WelcomeContainer = styled.div`
   button {
     margin: 1rem auto;
     padding: 0.5rem;
-    border: 3px solid var(--text-dark);
-    border-radius: 50%;
     cursor: pointer;
     background: none;
     height: 5em;
     width: auto;
-    transition: border 0.3s ease-in-out;
-    :hover {
-      border: 0px solid hsla(210, 53%, 15%, 0);
-    }
+    border: none;
+
     img {
       height: 100%;
       transition: var(--transition);
