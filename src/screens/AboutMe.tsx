@@ -12,14 +12,14 @@ const AboutMe: FunctionComponent = () => {
 
   return (
     <AboutMeWrapper>
-      <h1>Über mich:</h1>
+      <h1>Über mich</h1>
       <img
         src={src}
         width="320px"
         height="320px"
         alt="Christoph as a Gangmember"
         style={{
-          filter: blur ? "blur(20px)" : "none",
+          filter: blur ? "blur(10px)" : "none",
           transition: blur ? "none" : "filter 0.3s ease-out",
         }}
       />

@@ -8,7 +8,13 @@ const Welcome: FunctionComponent = () => {
   const history = useHistory();
   return (
     <WelcomeContainer>
-      <img src={Logo} alt="Lemur-Logo" />
+      <img
+        loading="lazy"
+        src={Logo}
+        alt="Lemur-Logo"
+        height="200"
+        width="auto"
+      />
       <h1>Baumpflege</h1>
       <hr />
       <h2>Christoph Mössinger</h2>
