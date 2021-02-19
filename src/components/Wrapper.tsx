@@ -19,8 +19,8 @@ const Wrapper: FC<WrapperProps> = ({ children }) => {
       bgImageAlt="Forest"
       strength={-200}
       style={{
-        filter: blur ? "blur(20px)" : "none",
-        // transition: blur ? "none" : "filter 0.3s ease-out",
+        filter: blur ? "blur(15px)" : "none",
+        transition: "filter 0.3s ease-out",
       }}
     >
       <WrapperContainer>{children}</WrapperContainer>;
