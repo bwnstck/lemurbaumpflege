@@ -19,7 +19,7 @@ const Skillz: FunctionComponent = () => {
           <h3>
             <div />
             <BeforeTree>
-              <TreeImg src={Tree} alt="Baum" loading="lazy" />
+              <TreeImg src={Tree} alt='Baum' loading='lazy' />
             </BeforeTree>
             Baumpflege
           </h3>
@@ -27,7 +27,7 @@ const Skillz: FunctionComponent = () => {
             <li>
               <h4> JUNGBAUM-PFLEGE</h4>
               Durch die frühe Pflege kann ein Baum sich gesund entwickeln und
-              die kleinen Schnittstellen gut überwallen.
+              kleine Schnittstellen gut überwallen.
             </li>
             <li>
               <h4>TOTHOLZ-ENTFERNUNG </h4>
@@ -37,18 +37,19 @@ const Skillz: FunctionComponent = () => {
             <li>
               <h4>KRONENPFLEGE</h4>
               Fehlentwicklungen in der Krone werden entnommen, tote und reibende
-              Äste entfernt sowie an Straßen und Wegen das Lichtraumprofil
+              Äste entfernt, sowie an Straßen und Wegen das Lichtraumprofil
               wieder hergestellt.
             </li>
             <li>
-              <h4>KRONENKÜRZUNG</h4> Die Baumkrone wird aus statischen oder
-              gestalterischen Gründen in Ihrer Höhe oder Breite verringert, es
-              kann auch nur an Teilen der Krone vorgenommen werden
-              (Kronenteileinkürzung).
+              <h4>KRONENKÜRZUNG</h4>
+              Die Baumkrone wird aus statischen oder gestalterischen Gründen in
+              ihrer Höhe oder Breite verringert, es können auch nur Teile der
+              Krone eingekürzt werden (Kronenteileinkürzung).
             </li>
             <li>
-              <h4>OBSTBAUM-SCHNITT</h4> Gesunderhaltung der Krone, Vorbeugung
-              von Austausbrüchen durch Obstbehang.
+              <h4>OBSTBAUM-SCHNITT</h4>
+              Gesunderhaltung der Krone, Vorbeugung von Austausbrüchen durch
+              Obstbehang.
             </li>
           </ul>
         </Card>
@@ -56,14 +57,14 @@ const Skillz: FunctionComponent = () => {
           <Card>
             <h3>
               <div />
-              <MagnifierGlass src={Magnifier} alt="Klettern" loading="lazy" />
+              <MagnifierGlass src={Magnifier} alt='Klettern' loading='lazy' />
               Baumkontrolle
             </h3>
             <ul>
               <li>
                 Als Eigentümer eines Grundstücks ist man auch für die
                 Verkehrssicherheit der dort stehenden Bäume verantwortlich. Um
-                diese Bäume richtig einzuschätzen helfe ich ihnen gerne mit
+                diese Bäume richtig einzuschätzen, helfe ich ihnen gerne mit
                 entsprechenden Kontrollverfahren.
               </li>
             </ul>
@@ -72,7 +73,7 @@ const Skillz: FunctionComponent = () => {
             <h3>
               <div />
               <BeforeGrow>
-                <img src={TreeLove} alt="Wachsender Baum" loading="lazy" />
+                <img src={TreeLove} alt='Wachsender Baum' loading='lazy' />
               </BeforeGrow>
               Pflanzberatung
             </h3>
@@ -80,9 +81,9 @@ const Skillz: FunctionComponent = () => {
               <li>
                 Bäume werden in der Stadt leider oft in zu kleine Lebensräume
                 gepflanzt, dadurch entstehen viele Folgekosten an dem Baum
-                (extra Pflege, Düngung, Bewässerung…). Durch die Richtige
+                (extra Pflege, Düngung, Bewässerung...). Durch die richtige
                 Auswahl des Standorts, die entsprechende Vorbereitung und die
-                passende Baumsorten Wahl hat man mehr Freude an dem Baum.
+                passende Wahl der Baumsorten hat man mehr Freude an dem Baum.
               </li>
             </ul>
           </Card>
@@ -91,8 +92,8 @@ const Skillz: FunctionComponent = () => {
               <div />
               <RotateOnHoverImg
                 src={Chainsaw}
-                alt="Kettensäge"
-                loading="lazy"
+                alt='Kettensäge'
+                loading='lazy'
               />
               Fällarbeiten
             </h3>
@@ -111,20 +112,19 @@ const Skillz: FunctionComponent = () => {
               <div />
               <CertificateImg
                 src={Certificate}
-                alt="Zertifikat"
-                loading="lazy"
+                alt='Zertifikat'
+                loading='lazy'
               />
               Gutachten
             </h3>
             <ul>
               <li>
                 Für Beratung beim <b>Baumschutz auf Baustellen</b> oder der
-                Bauaufsicht bei Erdarbeiten im Wurzelbereich, gerne unterstütze
-                ich Sie dabei. Der Baum ist ein Lebensraum für viele Tiere, die
-                Kontrolle und Erfassung der Baumbewohner kann in einem{" "}
-                <b> Artenschutz</b> Gutachten erfasst werden. Auch Beringungen
-                von Vögeln oder ähnliche Projekte werden durch das Baumklettern
-                gerne unterstützt.
+                Bauaufsicht bei Erdarbeiten im Wurzelbereich. Der Baum ist ein
+                Lebensraum für viele Tiere, die Kontrolle und Erfassung der
+                Baumbewohner kann in einem <b>Artenschutz</b> Gutachten erfasst werden.
+                Auch Beringungen von Vögeln oder ähnliche Projekte werden durch
+                das Baumklettern gerne unterstützt.
               </li>
             </ul>
           </Card>

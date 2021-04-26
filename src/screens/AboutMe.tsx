@@ -15,9 +15,9 @@ const AboutMe: FunctionComponent = () => {
       <h1>Über mich</h1>
       <img
         src={src}
-        width="320px"
-        height="320px"
-        alt="Christoph as a Gangmember"
+        width='320px'
+        height='320px'
+        alt='Christoph as a Gangmember'
         style={{
           filter: blur ? "blur(10px)" : "none",
           transition: blur ? "none" : "filter 0.3s ease-out",
@@ -48,11 +48,11 @@ const AboutMe: FunctionComponent = () => {
         {textLength === "s" ? (
           <>
             <p>
-              Nach dem Arboristik Studium in Göttingen und der Ausbildung zum
-              Fachagrarwirt für Baumpflege und Baumsanierung gründete ich 2016
-              meine Baumpflegefirma Lemur, um den Wuchs der Bäume zu fördern und
-              den besten Ausgleich zwischen Natur und Stadt, Baum und Mensch zu
-              erreichen!
+              Nach dem <b>Arboristik Studium</b> in Göttingen und der Ausbildung
+              zum Fachagrarwirt für Baumpflege und Baumsanierung gründete ich
+              2016 meine Baumpflegefirma Lemur, um den Wuchs der Bäume zu
+              fördern und den besten Ausgleich zwischen Natur und Stadt, Baum
+              und Mensch zu erreichen!
             </p>
             <p>
               Der Baum übernimmt viele Aufgaben in der Stadt. Er verbessert das
@@ -60,29 +60,31 @@ const AboutMe: FunctionComponent = () => {
               Schattenspender. Er bringt die Natur in die Stadt. Parkanlagen mit
               Bäumen schaffen Räume für Freude und Erholung. Für viele Tiere ist
               der Baum ein wichtiger oder der einzige Lebensraum, den sie als
-              Nahrungsgrundlage, Schlaf-, Ruhe- oder Nistplatz brauchen. Diesen
-              Lebensraum Baum will ich durch meine Arbeit schützen und erhalten.
+              Nahrungsgrundlage, Schlaf-, Ruhe- oder Nistplatz brauchen. Diesen{" "}
+              <b>Lebensraum Baum</b> will ich durch meine Arbeit{" "}
+              <b>schützen und erhalten</b>.
             </p>
           </>
         ) : textLength === "m" ? (
           <>
             <p>
-              In der Region Heilbronn aufgewachsen war ich schon als Kind in der
-              Natur unterwegs. Durch ein ”Freiwilliges ökologisches Jahr“ auf
-              dem Waldheim Gaffenberg entdeckte ich mein Interesse an Bäumen.
-              Nicht nur die Größe, auch ihre Eigenart und die vielfältigen
-              Standorte sind immer wieder bewundernswert. So fasste ich den
-              Entschluss, an der HAWK in Göttingen Arboristik zu studieren.{" "}
+              In der <b>Region Heilbronn</b> aufgewachsen war ich schon als Kind
+              in der Natur unterwegs. Durch ein ”Freiwilliges ökologisches Jahr“
+              auf dem Waldheim Gaffenberg entdeckte ich mein Interesse an
+              Bäumen. Nicht nur die Größe, auch ihre Eigenart und die
+              vielfältigen Standorte sind immer wieder bewundernswert. So fasste
+              ich den Entschluss, an der HAWK in Göttingen Arboristik zu
+              studieren.
             </p>
             <p>
-              Durch meinen drei Studienjahren wurden die biologischen
+              Durch meinen <b>drei Studienjahren</b> wurden die biologischen
               Grundkenntnisse vertieft. Zum Studienprogramm gehörten
               Diskussionen über das Thema Bäume in der Stadt: Welche Aufgaben
               übernehmen sie? Welche Ansprüche haben sie? Die Fachgespräche
               brachten mir einen weiten Blick für das urbane Grün.
             </p>
             <p>
-              Im ersten Sommer machte ich den Kletterschein. Das ist die
+              Im ersten Sommer machte ich den <b>Kletterschein</b>. Das ist die
               Voraussetzung, beruflich mit Seilklettertechnik und Handsäge im
               Baum zu arbeiten. In den weiteren Ferien arbeitete ich zusammen
               mit Studienkollegen in der Baumpflege und machte Praktika bei
@@ -90,9 +92,10 @@ const AboutMe: FunctionComponent = () => {
             </p>
             <p>
               Nach dem Studienabschluss festigte ich mein Wissen und sammelte
-              zusätzlich praktische Erfahrungen bei der Ausbildung zum
-              Fachagrarwirt für Baumpflege und Baumsanierung an der
-              Landesversuchsanstalt für Gartenbau in Heidelberg.
+              zusätzlich praktische Erfahrungen bei der{" "}
+              <b>Ausbildung zum Fachagrarwirt</b> für Baumpflege und
+              Baumsanierung an der Landesversuchsanstalt für Gartenbau in
+              Heidelberg.
             </p>
             <p>
               Der Baum übernimmt viele Aufgaben in der Stadt. Er verbessert das
@@ -103,8 +106,8 @@ const AboutMe: FunctionComponent = () => {
               Nahrungsgrundlage, Schlaf-, Ruhe- oder Nistplatz brauchen.
             </p>
             <p>
-              2016 gründete ich meine Baumpflegefirma Lemur, um den Wuchs der
-              Bäume zu fördern und den besten Ausgleich zwischen Natur und
+              <b>2016 gründete ich meine Baumpflegefirma Lemur</b>, um den Wuchs
+              der Bäume zu fördern und den besten Ausgleich zwischen Natur und
               Stadt, Baum und Mensch zu erreichen!
             </p>
           </>
@@ -123,7 +126,7 @@ const AboutMe: FunctionComponent = () => {
               der HAWK in Göttingen Arboristik zu studieren.
             </p>
             <p>
-              Durch meinen drei Studienjahren wurden die biologischen
+              Durch meinen <b>drei Studienjahren</b> wurden die biologischen
               Grundkenntnisse vertieft. Zum Studienprogramm gehörten
               Diskussionen über das Thema Bäume in der Stadt: Welche Aufgaben
               übernehmen sie? Welche Ansprüche haben sie? Die Fachgespräche
@@ -131,11 +134,11 @@ const AboutMe: FunctionComponent = () => {
             </p>
             <p>
               Während den Semesterferien bildete ich mich ständig praktisch
-              fort. Im ersten Sommer machte ich den Kletterschein. Das ist die
-              Voraussetzung, beruflich mit Seilklettertechnik und Handsäge im
-              Baum zu arbeiten. In den weiteren Ferien arbeitete ich zusammen
-              mit Studienkollegen in der Baumpflege und machte Praktika bei
-              unterschiedlichen Baumpflegefirmen in ganz Deutschland. Die
+              fort. Im ersten Sommer machte ich den <b>Kletterschein</b>. Das
+              ist die Voraussetzung, beruflich mit Seilklettertechnik und
+              Handsäge im Baum zu arbeiten. In den weiteren Ferien arbeitete ich
+              zusammen mit Studienkollegen in der Baumpflege und machte Praktika
+              bei unterschiedlichen Baumpflegefirmen in ganz Deutschland. Die
               Umsetzung der Theorie in die Praxis war am Anfang nicht so
               einfach, doch langsam entwickelte sich ein anderer Blick. Ich
               konnte an den ersten Bäumen, die ich gepflegt habe, die Reaktionen
@@ -143,9 +146,10 @@ const AboutMe: FunctionComponent = () => {
             </p>
             <p>
               Nach dem Studienabschluss festigte ich mein Wissen und sammelte
-              zusätzlich praktische Erfahrungen bei der Ausbildung zum
-              Fachagrarwirt für Baumpflege und Baumsanierung an der
-              Landesversuchsanstalt für Gartenbau in Heidelberg.
+              zusätzlich praktische Erfahrungen bei der{" "}
+              <b>Ausbildung zum Fachagrarwirt</b> für Baumpflege und
+              Baumsanierung an der Landesversuchsanstalt für Gartenbau in
+              Heidelberg.
             </p>
             <p>
               Nach Abschluss meiner Ausbildungen bleibt mir der Kontakt mit
@@ -162,8 +166,8 @@ const AboutMe: FunctionComponent = () => {
               Nahrungsgrundlage, Schlaf-, Ruhe- oder Nistplatz brauchen.
             </p>
             <p>
-              2016 gründete ich meine Baumpflegefirma Lemur, um den Wuchs der
-              Bäume zu fördern und den besten Ausgleich zwischen Natur und
+              <b>2016 gründete ich meine Baumpflegefirma Lemur</b>, um den Wuchs
+              der Bäume zu fördern und den besten Ausgleich zwischen Natur und
               Stadt, Baum und Mensch zu erreichen!
             </p>
           </>
@@ -171,7 +175,9 @@ const AboutMe: FunctionComponent = () => {
 
         <p>
           Sie haben noch Fragen? Setzen Sie sich doch gerne mit mir{" "}
-          <a href="mailto:info@lemurbaumpflege.de">in Verbindung.</a>
+          <a href='mailto:info@lemurbaumpflege.de'>
+            <b>in Verbindung.</b>
+          </a>
         </p>
         <p>Ihr Christoph Mössinger</p>
       </Section>
