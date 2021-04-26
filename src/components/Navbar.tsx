@@ -10,8 +10,6 @@ const Navbar: FunctionComponent = () => {
   const [open, setOpen] = useState(false);
   const [isActive, setIsActive] = useState("");
 
-  console.log(open);
-
   window.addEventListener("resize", () =>
     isMobile() ? setMobile(true) : setMobile(false)
   );
