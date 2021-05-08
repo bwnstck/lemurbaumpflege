@@ -45,7 +45,7 @@ const Navbar: FunctionComponent = () => {
           ))}
         </ul>
       )}
-      {<BurgerMenu open={open} onClick={() => setOpen(!open)} />}
+      {mobile && <BurgerMenu open={open} onClick={() => setOpen(!open)} />}
       {
         <Sidebar open={open}>
           <ul onClick={() => setOpen(!open)}>
