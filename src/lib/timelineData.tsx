@@ -2,6 +2,11 @@ import { TimelineItemModel } from "react-chrono/dist/models/TimelineItemModel";
 
 const timelineData: TimelineItemModel[] = [
   {
+    title: "28.03.2022 - 30.03.2022",
+    cardTitle: "Weiterbildung",
+    cardSubtitle: "Praktische Bodenkunde für Baum-Fachleute",
+  },
+  {
     title: "Januar 2020",
     cardTitle: "Mitgliedschaft",
     cardSubtitle: "Mitglied Deutschen Dendrologischen Gesellschaft ev",

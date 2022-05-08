@@ -21,13 +21,12 @@ const QualiSection = styled(Section)`
 const Notice = styled.p`
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  border 1px solid var(--paradise-pink);
+  border: 1px solid var(--paradise-pink);
   background: var(--text-primary);
   color: var(--paradise-pink);
   font-weight: bold;
-  max-width:40ch;
-  text-align:center;
+  max-width: 40ch;
+  text-align: center;
   margin: auto;
-  text-overflow:
 `;
 export default Qualifications;
